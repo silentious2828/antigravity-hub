@@ -12,6 +12,13 @@ class EmailProvider(str, Enum):
     OUTLOOK = "outlook"
     UNKNOWN = "unknown"
 
+
+class ProviderAction(str, Enum):
+    """Concrete action path for the selected provider."""
+    GMAIL_DRAFT = "gmail_draft"
+    OUTLOOK_DRAFT = "outlook_draft"
+    UNKNOWN = "unknown"
+
 class TriageCategory(str, Enum):
     """Email triage categories for routing."""
     LOGISTICS = "logistics"
@@ -37,6 +44,7 @@ class TriageResult(BaseModel):
     """Result of email triage analysis."""
     category: TriageCategory = Field(default=TriageCategory.UNKNOWN, description="Triage category")
     provider: EmailProvider = Field(default=EmailProvider.UNKNOWN, description="Selected provider")
+    provider_action: ProviderAction = Field(default=ProviderAction.UNKNOWN, description="Concrete action path")
     priority: str = Field(default="medium", description="Priority level: high/medium/low")
     confidence: float = Field(default=0.0, description="Routing confidence 0-100")
     reasoning: str = Field(default="", description="LLM reasoning for classification")

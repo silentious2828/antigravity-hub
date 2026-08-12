@@ -19,6 +19,7 @@ from crewai_flow.state_model import (
     EmailFlowState,
     EmailMetadata,
     EmailProvider,
+    ProviderAction,
     TriageCategory,
     TriageResult,
     DraftResult,
@@ -174,6 +175,9 @@ class TriageFlow(Flow):
         triage = TriageResult(
             category=category,
             provider=provider,
+            provider_action=ProviderAction.GMAIL_DRAFT if provider == EmailProvider.GMAIL else (
+                ProviderAction.OUTLOOK_DRAFT if provider == EmailProvider.OUTLOOK else ProviderAction.UNKNOWN
+            ),
             priority="high" if category in (TriageCategory.LOGISTICS, TriageCategory.COMPLIANCE) else "medium",
             confidence=0.9 if provider != EmailProvider.UNKNOWN else 0.5,
             reasoning=f"Auto-selected {provider.value} based on source_inbox={metadata.source_inbox}",

@@ -9,7 +9,10 @@ from __future__ import annotations
 import os
 from typing import Any, Dict, Optional, Type
 
-from crewai.tools import BaseTool
+try:
+    from crewai.tools import BaseTool
+except ModuleNotFoundError:  # pragma: no cover - optional dependency
+    BaseTool = object  # type: ignore[misc,assignment]
 from pydantic import BaseModel, Field
 
 from crewai_flow.state_model import EmailProvider
@@ -219,9 +222,64 @@ class UnifiedEmailDraftTool(BaseTool):
             "error_message": f"Unsupported provider: {provider}. Use 'gmail' or 'outlook'.",
         }
 
-    # ------------------------------------------------------------------
-    # Credential helpers (stubs - wire to your OAuth flow)
-    # ------------------------------------------------------------------
+from tools.agent_emitter import emit_audit_event
+
+
+def get_gmail_creds():
+    """Retrieve Gmail OAuth2 credentials."""
+    token_path = os.getenv("GMAIL_TOKEN_PATH", "token.json")
+    creds_path = os.getenv("GMAIL_CREDENTIALS_PATH", "client_secret.json")
+
+    from google.oauth2.credentials import Credentials
+    from google.auth.transport.requests import Request
+    from google_auth_oauthlib.flow import InstalledAppFlow
+
+    SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
+
+    if os.path.exists(token_path):
+        creds = Credentials.from_authorized_user_file(token_path, SCOPES)
+    else:
+        creds = None
+
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(creds_path, SCOPES)
+            creds = flow.run_local_server(port=0)
+        with open(token_path, "w") as token:
+            token.write(creds.to_json())
+
+    return creds
+
+
+def get_outlook_token():
+    """Retrieve Outlook access token via MSAL."""
+    cache_path = os.getenv("OUTLOOK_TOKEN_CACHE", "token_cache.bin")
+    client_id = os.environ["OUTLOOK_CLIENT_ID"]
+    tenant_id = os.getenv("OUTLOOK_TENANT_ID", "common")
+    authority = f"https://login.microsoftonline.com/{tenant_id}"
+    scopes = ["Mail.ReadWrite", "offline_access"]
+
+    cache = msal.SerializableTokenCache()
+    if os.path.exists(cache_path):
+        cache.deserialize(open(cache_path, "r").read())
+
+    app = msal.PublicClientApplication(client_id, authority=authority, token_cache=cache)
+    accounts = app.get_accounts()
+    result = None
+    if accounts:
+        result = app.acquire_token_silent(scopes, account=accounts[0])
+
+    if not result:
+        result = app.acquire_token_interactive(scopes=scopes)
+        with open(cache_path, "w") as f:
+            f.write(cache.serialize())
+
+    if not result or "access_token" not in result:
+        raise RuntimeError(f"Outlook auth failed: {result}")
+
+    return result["access_token"]
 
     def _get_gmail_credentials(self):
         """Retrieve Gmail OAuth2 credentials.
@@ -242,10 +300,7 @@ class UnifiedEmailDraftTool(BaseTool):
         )
 
     def _get_outlook_token(self) -> str:
-        """Retrieve Outlook access token via MSAL.
-
-        TODO: Wire to your MSAL cache (outlook_token_cache.json).
-        """
+        """Retrieve Outlook access token via MSAL."""
         cache_path = os.getenv("OUTLOOK_TOKEN_CACHE", "outlook_token_cache.json")
         if not os.path.exists(cache_path):
             raise RuntimeError(
