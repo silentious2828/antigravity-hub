@@ -21,3 +21,4 @@ venv/
 
 # Optional dependency locks
 uv.lock
+audit/agent_audit_trail.db
