@@ -92,7 +92,8 @@ jobs:
 
       - name: 🧪 Run API test suite with coverage
         run: |
-          python -m pytest supply-chain-api/tests/test_api.py --cov=supply-chain-api/app --cov=supply-chain-api/service --cov=supply-chain-api/routes --cov-report=xml
+          cd supply-chain-api
+          python -m pytest tests/ --rootdir=. --cov=app --cov=service --cov=routes --cov-report=xml
 
       - name: 📊 Upload API coverage to Codecov
         uses: codecov/codecov-action@v4
@@ -111,7 +112,7 @@ jobs:
       - name: 🛎️ Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🐍 Set up Python 3.9
+      - name: 🐍 Set up Python 3.10
         uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
