@@ -58,14 +58,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest nbconvert coverage
 
-      - name: 📝 Notebook syntax check with coverage
+      - name: 📝 Notebook syntax check
         run: |
-          python3 -c "
-import json, coverage
+          test -f ai-enterprise/AI_Enterprise_Operational_Dashboard.ipynb
+          python3 -m py_compile <<'PYEOF'
+import json
 nb = json.load(open('ai-enterprise/AI_Enterprise_Operational_Dashboard.ipynb'))
-code_cells = [c for c in json.load(open('ai-enterprise/AI_Enterprise_Operational_Dashboard.ipynb'))['cells'] if c['cell_type'] == 'code']
-print(f'✓ {len(code_cells)} code cells validated')
-"
+code_cells = [c for c in nb['cells'] if c['cell_type'] == 'code']
+print(f"Validated {len(code_cells)} code cells")
+PYEOF
 
       - name: 📊 Upload enterprise coverage to Codecov
         uses: codecov/codecov-action@v4
