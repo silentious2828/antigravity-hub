@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Supply Chain AI — Route Optimizer</title>
+<style>
+  :root {
+    --bg: #0f172a; --panel: #1e293b; --panel2: #0b1220;
+    --text: #e2e8f0; --muted: #94a3b8; --border: #334155;
+    --accent: #38bdf8; --ok: #22c55e; --warn: #f59e0b;
+    --warehouse: #38bdf8; --order: #a78bfa; --route: #f472b6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); min-height: 100vh;
+  }
+  header {
+    padding: 20px 28px; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px;
+  }
+  header h1 { font-size: 18px; margin: 0; }
+  header .tag { color: var(--muted); font-size: 13px; }
+  .status { margin-left: auto; font-size: 13px; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ok); }
+  .dot.off { background: var(--warn); }
+  main { display: grid; grid-template-columns: 320px 1fr; gap: 20px; padding: 24px; max-width: 1200px; margin: 0 auto; }
+  .panel {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 18px;
+  }
+  .panel h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 0 0 14px; }
+  label { display: block; font-size: 12px; color: var(--muted); margin: 12px 0 4px; }
+  textarea, input, select {
+    width: 100%; background: var(--panel2); border: 1px solid var(--border); color: var(--text);
+    border-radius: 8px; padding: 9px 11px; font-size: 13px; font-family: inherit;
+  }
+  textarea { min-height: 130px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; resize: vertical; }
+  button {
+    width: 100%; margin-top: 16px; padding: 11px; border: none; border-radius: 8px;
+    background: var(--accent); color: #04263d; font-weight: 600; font-size: 14px; cursor: pointer;
+  }
+  button:disabled { opacity: .5; cursor: wait; }
+  button.secondary { background: transparent; border: 1px solid var(--border); color: var(--text); margin-top: 8px; }
+  .hint { font-size: 11px; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+  #chart { width: 100%; background: var(--panel2); border: 1px solid var(--border); border-radius: 12px; }
+  #stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+  .stat { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+  .stat .num { font-size: 22px; font-weight: 700; }
+  .stat .lab { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .legend { display: flex; gap: 18px; font-size: 12px; color: var(--muted); margin-top: 14px; flex-wrap: wrap; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .sw { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .legend .route { height: 3px; border-radius: 2px; width: 20px; background: var(--route); }
+  #log { margin-top: 16px; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--muted); max-height: 120px; overflow-y: auto; }
+  #log div { padding: 2px 0; border-bottom: 1px solid var(--panel2); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Supply Chain AI</h1>
+  <span class="tag">Route Optimizer</span>
+  <div class="status"><span class="dot" id="healthdot"></span><span id="healthtext">checking…</span></div>
+</header>
+
+<main>
+  <div>
+    <div class="panel">
+      <h2>Input</h2>
+      <label for="data">Network (JSON)</label>
+      <textarea id="data" spellcheck="false"></textarea>
+      <button id="run">Run Optimization</button>
+      <button class="secondary" id="demo">Load Demo Network</button>
+      <div class="hint">Provide warehouses, orders, and optional connections. Orders are allocated to their nearest warehouse, then routed.</div>
+    </div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--warehouse)"></i> Warehouse</span>
+      <span><i class="sw" style="background:var(--order)"></i> Order</span>
+      <span><i class="sw" style="background:var(--route); height:3px; border-radius:2px; width:20px"></i> Route</span>
+    </div>
+  </div>
+
+  <div>
+    <div class="panel" style="padding-bottom:8px">
+      <h2>Visualization</h2>
+      <svg id="chart" viewBox="0 0 800 600" role="img" aria-label="Optimized supply chain routes"></svg>
+      <div id="log"></div>
+    </div>
+    <div id="stats">
+      <div class="stat"><div class="num" id="s-wh">–</div><div class="lab">Warehouses</div></div>
+      <div class="stat"><div class="num" id="s-orders">–</div><div class="lab">Orders</div></div>
+      <div class="stat"><div class="num" id="s-dist">–</div><div class="lab">Total distance</div></div>
+    </div>
+  </div>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const svg = $('chart');
+
+const DEMO = {
+  warehouses: [
+    { id: 'WH1', name: 'West Coast', x: 20, y: 120, capacity: 10000, current_inventory: 5000 },
+    { id: 'WH2', name: 'Central',   x: 400, y: 200, capacity: 8000, current_inventory: 4000 },
+    { id: 'WH3', name: 'East Coast', x: 720, y: 420, capacity: 9000, current_inventory: 4500 },
+  ],
+  orders: [
+    { id: 'O1', quantity: 100, x: 90,  y: 60,  priority: 1 },
+    { id: 'O2', quantity: 150, x: 150, y: 180, priority: 2 },
+    { id: 'O3', quantity: 200, x: 480, y: 120, priority: 1 },
+    { id: 'O4', quantity: 120, x: 520, y: 320, priority: 2 },
+    { id: 'O5', quantity: 180, x: 620, y: 520, priority: 3 },
+    { id: 'O6', quantity: 90,  x: 700, y: 240, priority: 2 },
+  ],
+  connections: [
+    { id: 'C1', origin_warehouse_id: 'WH1', destination_warehouse_id: 'WH2', transit_days: 2, cost_per_unit: 1.25 },
+    { id: 'C2', origin_warehouse_id: 'WH2', destination_warehouse_id: 'WH3', transit_days: 3, cost_per_unit: 1.80 },
+  ],
+};
+
+function log(msg) {
+  const div = document.createElement('div');
+  div.textContent = msg;
+  $('log').prepend(div);
+}
+
+function draw(net, result) {
+  // Map data coords (0..800) to svg viewBox (0..800) with margin
+  const W = 800, H = 600, pad = 40;
+  const xs = net.warehouses.concat(net.orders.map(o => ({ x: o.x }))).map(p => p.x);
+  const ys = net.warehouses.concat(net.orders.map(o => ({ y: o.y }))).map(p => p.y);
+  const xmin = Math.min(...xs), xmax = Math.max(...xs);
+  const ymin = Math.min(...ys), ymax = Math.max(...ys);
+  const sx = (x) => pad + (x - xmin) / (xmax - xmin || 1) * (W - 2 * pad);
+  const sy = (y) => pad + (y - ymin) / (ymax - ymin || 1) * (H - 2 * pad);
+
+  let h = '';
+  // routes
+  for (const [wid, route] of Object.entries(result.routes)) {
+    const wh = net.warehouses.find(w => w.id === wid);
+    if (!wh) continue;
+    let path = `M ${sx(wh.x)} ${sy(wh.y)}`;
+    for (const oid of route.order_ids) {
+      const o = net.orders.find(o => o.id === oid);
+      if (o) path += ` L ${sx(o.x)} ${sy(o.y)}`;
+    }
+    path += ` L ${sx(wh.x)} ${sy(wh.y)}`;
+    h += `<path d="${path}" fill="none" stroke="var(--route)" stroke-width="2" opacity="0.85"/>`;
+  }
+  // orders
+  for (const o of net.orders) {
+    h += `<circle cx="${sx(o.x)}" cy="${sy(o.y)}" r="7" fill="var(--order)" stroke="#fff" stroke-width="1"/>`;
+    h += `<text x="${sx(o.x) + 10}" y="${sy(o.y) + 4}" fill="var(--text)" font-size="11">${o.id}</text>`;
+  }
+  // warehouses
+  for (const w of net.warehouses) {
+    h += `<rect x="${sx(w.x) - 11}" y="${sy(w.y) - 11}" width="22" height="22" rx="4" fill="var(--warehouse)" stroke="#fff" stroke-width="1.5"/>`;
+    h += `<text x="${sx(w.x)}" y="${sy(w.y) - 18}" fill="var(--text)" font-size="12" text-anchor="middle" font-weight="600">${w.id}</text>`;
+    h += `<text x="${sx(w.x)}" y="${sy(w.y) + 26}" fill="var(--muted)" font-size="10" text-anchor="middle">${w.name}</text>`;
+  }
+  svg.innerHTML = h;
+}
+
+async function run() {
+  let net;
+  try { net = JSON.parse($('data').value); }
+  catch (e) { log('✗ Invalid JSON: ' + e.message); return; }
+
+  $('run').disabled = true;
+  $('run').textContent = 'Optimizing…';
+  try {
+    const res = await fetch('/api/optimize', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(net),
+    });
+    if (!res.ok) { const e = await res.json(); throw new Error(e.detail || res.statusText); }
+    const result = await res.json();
+    draw(net, result);
+    $('s-wh').textContent = net.warehouses.length;
+    $('s-orders').textContent = net.orders.length;
+    $('s-dist').textContent = result.total_distance.toFixed(1);
+    log(`✓ Optimized: ${Object.keys(result.routes).length} routes, ${result.total_distance.toFixed(1)} distance`);
+  } catch (e) {
+    log('✗ ' + e.message);
+  } finally {
+    $('run').disabled = false;
+    $('run').textContent = 'Run Optimization';
+  }
+}
+
+async function checkHealth() {
+  try {
+    const res = await fetch('/health');
+    const ok = res.ok && (await res.json()).status === 'ok';
+    $('healthdot').classList.toggle('off', !ok);
+    $('healthtext').textContent = ok ? 'API online' : 'API degraded';
+  } catch {
+    $('healthdot').classList.add('off');
+    $('healthtext').textContent = 'API offline';
+  }
+}
+
+$('run').addEventListener('click', run);
+$('demo').addEventListener('click', () => { $('data').value = JSON.stringify(DEMO, null, 2); log('Loaded demo network'); });
+
+$('data').value = JSON.stringify(DEMO, null, 2);
+log('Ready. Edit the network or hit Run Optimization.');
+draw(DEMO, { routes: {} });
+checkHealth();
+</script>
+</body>
+</html>
