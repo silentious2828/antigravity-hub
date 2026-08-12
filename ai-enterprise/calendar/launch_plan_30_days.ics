@@ -1,0 +1,396 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//QAFlow AI//Launch Plan//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:qaflow-ai-20260807-Day-1:-Lock-niche-an@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART:20260807T000000
+DTEND:20260807T020000
+SUMMARY:Day 1: Lock niche, pricing, and target list
+DESCRIPTION:Confirm QAFlow AI vertical: AI-powered QA report automation for manufacturing/supply chain. Lock pricing: Starter $49/mo, Pro $149/mo, Launch $79/mo. Finalize 50-company target list.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 1: Lock niche, pricing, and target list
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260808-Day-2:-One-page-offer@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART:20260808T000000
+DTEND:20260808T020000
+SUMMARY:Day 2: One-page offer + case studies
+DESCRIPTION:Write one-page offer for QAFlow AI. Create 2-3 case studies from supply chain/QA domain expertise. Set up Calendly and Stripe payment links.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 2: One-page offer + case studies
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260809-Day-3:-Landing-page-waitlist@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART:20260809T000000
+DTEND:20260809T020000
+SUMMARY:Day 3: Landing page + waitlist
+DESCRIPTION:Build Carrd/Framer landing page with QAFlow AI features, pricing, and waitlist form. Post validation on Reddit (r/manufacturing, r/qualityassurance) and LinkedIn.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 3: Landing page + waitlist
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260810-Day-4:-Domain-infrastructure@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART:20260810T000000
+DTEND:20260810T020000
+SUMMARY:Day 4: Domain + infrastructure setup
+DESCRIPTION:Register qaflow.ai domain. Set up Cloudflare DNS. Create GitHub repository. Initialize Next.js project. Connect Supabase database. Set up Clerk/Clerk authentication.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 4: Domain + infrastructure setup
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260811-Day-5:-AI-API-integration@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART:20260811T000000
+DTEND:20260811T020000
+SUMMARY:Day 5: AI API integration
+DESCRIPTION:Connect OpenAI GPT-4o API. Build core QA report generation prompt. Test with 10 real inspection note samples. Refine prompt for structured JSON output.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 5: AI API integration
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260812-Day-6:-Dashboard-UI@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART:20260812T000000
+DTEND:20260812T020000
+SUMMARY:Day 6: Dashboard UI
+DESCRIPTION:Build QAFlow AI dashboard with inspection notes input, report history, and usage counter. Create clean, minimal UI with Tailwind CSS and shadcn/ui.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 6: Dashboard UI
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260813-Day-7:-Deploy-staging@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART:20260813T000000
+DTEND:20260813T020000
+SUMMARY:Day 7: Deploy to Vercel staging
+DESCRIPTION:Deploy QAFlow AI to Vercel staging environment. Test end-to-end flow: landing page → signup → dashboard → generate report. Fix critical bugs.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 7: Deploy to Vercel staging
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260814-Day-8:-Stripe-products@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART:20260814T000000
+DTEND:20260814T020000
+SUMMARY:Day 8: Stripe products + pricing
+DESCRIPTION:Create Stripe products: Starter $49/mo, Pro $149/mo, Launch Offer $79/mo. Set up Stripe Billing webhooks. Configure tax settings.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 8: Stripe products + pricing
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260815-Day-9:-Checkout-flow@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART:20260815T000000
+DTEND:20260815T020000
+SUMMARY:Day 9: Stripe Checkout + webhook
+DESCRIPTION:Build Stripe Checkout session API route. Implement webhook handler for checkout.session.completed. Test subscription creation and user provisioning.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 9: Stripe Checkout + webhook
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260816-Day-10:-Usage-gating@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART:20260816T000000
+DTEND:20260816T020000
+SUMMARY:Day 10: Usage gating middleware
+DESCRIPTION:Implement usage limit checking middleware. Enforce plan limits: Starter 20 reports/mo, Pro unlimited. Test upgrade/downgrade flows.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 10: Usage gating middleware
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260817-Day-11:-Payment-flow-test@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART:20260817T000000
+DTEND:20260817T020000
+SUMMARY:Day 11: End-to-end payment test
+DESCRIPTION:Full test: signup → Stripe Checkout → webhook → dashboard access → generate report → usage tracking. Fix any edge cases.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 11: End-to-end payment test
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260818-Day-12:-Email-onboarding@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART:20260818T000000
+DTEND:20260818T020000
+SUMMARY:Day 12: Email onboarding automation
+DESCRIPTION:Set up Resend/Loops.so welcome email sequence. Create onboarding guide PDF. Configure email triggers for signup, payment, and usage alerts.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 12: Email onboarding automation
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260819-Day-13:-n8n-onboarding@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART=20260819T000000
+DTEND=20260819T020000
+SUMMARY:Day 13: n8n onboarding workflow
+DESCRIPTION:Deploy n8n workflow: Stripe webhook → Supabase user provisioning → welcome email → Slack alert. Import JSON workflow from /automation/.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 13: n8n onboarding workflow
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260820-Day-14:-Support-chatbot@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART=20260820T000000
+DTEND=20260820T020000
+SUMMARY:Day 14: AI support chatbot
+DESCRIPTION:Build RAG support chatbot with Supabase pgvector. Train on QAFlow AI documentation. Embed in dashboard for 24/7 automated support.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 14: AI support chatbot
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260821-Day-15:-SEO-pages@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART=20260821T000000
+DTEND=20260821T020000
+SUMMARY:Day 15: Programmatic SEO pages
+DESCRIPTION:Deploy 50 programmatic SEO landing pages: "AI QA report automation for [industry/city]". Set up dynamic routes in Next.js.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 15: Programmatic SEO pages
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260822-Day-16:-Churn-prevention@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART=20260822T000000
+DTEND=20260822T020000
+SUMMARY:Day 16: Churn prevention workflow
+DESCRIPTION:Build n8n cron workflow: daily check for inactive users (>7 days) → re-engagement email → discount offer if no response.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 16: Churn prevention workflow
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260823-Day-17:-Monitoring-setup@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART=20260823T000000
+DTEND=20260823T020000
+SUMMARY:Day 17: Monitoring + alerts
+DESCRIPTION:Configure UptimeRobot for QAFlow AI staging + production. Set up Slack alerts for downtime, payment failures, and usage spikes.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 17: Monitoring + alerts
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260824-Day-18:-Final-QA@qaflow.ai
+DTSTAMP:20260807T020000Z
+DTSTART=20260824T000000
+DTEND=20260824T020000
+SUMMARY:Day 18: Final QA + bug fixes
+DESCRIPTION:Complete QA pass on staging. Fix bugs. Optimize performance. Prepare for public launch.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 18: Final QA + bug fixes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260825-Day-19:-Email-waitlist@qaflow.ai
+DTSTAMP=20260807T020000Z
+DTSTART=20260825T000000
+DTEND=20260825T020000
+SUMMARY:Day 19: Email waitlist — "We're LIVE!"
+DESCRIPTION:Send launch email to waitlist subscribers. Offer 20% discount for first 20 customers. Direct to pricing page.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 19: Email waitlist — We're LIVE!
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:qaflow-ai-20260826-Day-20:-ProductHunt-launch@qaflow.ai
+DTSTAMP=20260807T020000Z
+DTSTART=20260826T000000
+DTEND=20260826T020000
+SUMMARY:Day 20: Product Hunt launch
+DESCRIPTION:Launch QAFlow AI on Product Hunt. Engage with every comment. Target top 5 product of the day.
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 20: Product Hunt launch
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID=qaflow-ai-20260827-Day-21:-Reddit-LinkedIn-launch@qaflow.ai
+DTSTAMP=20260807T020000Z
+DTSTART=20260827T000000
+DTEND=20260827T020000
+SUMMARY:Day 21: Reddit + LinkedIn launch posts
+DESCRIPTION:Post launch announcement on Reddit (r/manufacturing, r/qualityassurance, r/SaaS) and LinkedIn. Share behind-the-scenes build story.
+BEGIN:VALARM
+TRIGGER=-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 21: Reddit + LinkedIn launch posts
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID=qaflow-ai-20260828-Day-22:-SaaS-directories@qaflow.ai
+DTSTAMP=20260807T020000Z
+DTSTART=20260828T000000
+DTEND=20260828T020000
+SUMMARY:Day 22: Submit to 20 SaaS directories
+DESCRIPTION:Submit QAFlow AI to SaaS directories: AlternativeTo, Capterra, G2, GetApp, SaaSHub, etc. Optimize listings for SEO.
+BEGIN:VALARM
+TRIGGER=-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 22: Submit to 20 SaaS directories
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID=qaflow-ai-20260829-Day-23:-Cold-email-batch-1@qaflow.ai
+DTSTAMP=20260807T020000Z
+DTSTART=20260829T000000
+DTEND=20260829T020000
+SUMMARY:Day 23: Cold email batch #1 (100 leads)
+DESCRIPTION:Send first 100 cold outreach emails from Target_List_50_Companies.md. Use personalized templates from cold_emails_10_targets.md.
+BEGIN:VALARM
+TRIGGER=-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 23: Cold email batch #1 (100 leads)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID=qaflow-ai-20260830-Day-24:-Affiliate-program@qaflow.ai
+DTSTAMP=20260807T020000Z
+DTSTART=20260830T000000
+DTEND=20260830T020000
+SUMMARY:Day 24: Launch affiliate program
+DESCRIPTION:Set up Rewardful affiliate program. Offer 30% recurring commission. Recruit first 10 affiliates from QA/quality networks.
+BEGIN:VALARM
+TRIGGER=-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 24: Launch affiliate program
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID=qaflow-ai-20260831-Day-25:-Collect-testimonials@qaflow.ai
+DTSTAMP=20260807T020000Z
+DTSTART=20260831T000000
+DTEND=20260831T020000
+SUMMARY:Day 25: Collect first testimonials
+DESCRIPTION:Reach out to early users for testimonials. Offer 1 month free for video testimonial. Update landing page with social proof.
+BEGIN:VALARM
+TRIGGER=-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 25: Collect first testimonials
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID=qaflow-ai-20260901-Day-26:-Metrics-review@qaflow.ai
+DTSTAMP=20260807T020000Z
+DTSTART=20260901T000000
+DTEND=20260901T020000
+SUMMARY:Day 26: Metrics review + pivots
+DESCRIPTION:Review Week 1 metrics: traffic, conversion rate, MRR, churn. Identify top acquisition channel. Adjust messaging and pricing if needed.
+BEGIN:VALARM
+TRIGGER=-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 26: Metrics review + pivots
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID=qaflow-ai-20260902-Day-27:-Content-batch@qaflow.ai
+DTSTAMP=20260807T020000Z
+DTSTART=20260902T000000
+DTEND=20260902T020000
+SUMMARY:Day 27: Content batch for Month 2
+DESCRIPTION:Generate 10 blog posts with AI: "How AI is transforming QA in manufacturing", "QA report automation best practices", etc. Schedule for weekly publishing.
+BEGIN:VALARM
+TRIGGER=-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 27: Content batch for Month 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID=qaflow-ai-20260903-Day-28:-Upsell-campaign@qaflow.ai
+DTSTAMP=20260807T020000Z
+DTSTART=20260903T000000
+DTEND=20260903T020000
+SUMMARY:Day 28: Upsell campaign
+DESCRIPTION:Identify Starter users at 80%+ usage limit. Send personalized upgrade offers to Pro tier. Highlight SAP/Excel import and team seats.
+BEGIN:VALARM
+TRIGGER=-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 28: Upsell campaign
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID=qaflow-ai-20260904-Day-29:-Partnership-outreach@qaflow.ai
+DTSTAMP=20260807T020000Z
+DTSTART=20260904T000000
+DTEND=20260904T020000
+SUMMARY:Day 29: Partnership outreach
+DESCRIPTION:Reach out to QA/quality training institutes, SAP consultants, and manufacturing associations for partnership and co-marketing opportunities.
+BEGIN:VALARM
+TRIGGER=-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 29: Partnership outreach
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID=qaflow-ai-20260905-Day-30:-Month-1-review@qaflow.ai
+DTSTAMP=20260807T020000Z
+DTSTART=20260905T000000
+DTEND=20260905T020000
+SUMMARY:Day 30: Month 1 review + Month 2 plan
+DESCRIPTION:Complete Month 1 retrospective. Review MRR, customer acquisition cost, churn, NPS. Plan Month 2 feature roadmap and acquisition experiments.
+BEGIN:VALARM
+TRIGGER=-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Day 30: Month 1 review + Month 2 plan
+END:VALARM
+END:VEVENT
+END:VCALENDAR

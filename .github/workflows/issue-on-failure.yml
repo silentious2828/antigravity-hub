@@ -1,0 +1,43 @@
+name: Issue on Failure
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
+
+jobs:
+  create-issue-on-failure:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create GitHub Issue on CI failure
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const workflow = context.payload.workflow_run;
+            const runUrl = workflow.html_url;
+            
+            // Determine which job failed
+            let failedJobs = [];
+            if (workflow.jobs) {
+              for (const [jobId, job] of Object.entries(workflow.jobs)) {
+                if (job.conclusion === 'failure') {
+                  failedJobs.push(job.name);
+                }
+              }
+            }
+            
+            const failedJobsList = failedJobs.length > 0 
+              ? failedJobs.map(job => `- ${job}`).join('\n')
+              : '- Unknown job (check workflow run details)';
+            
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `CI failure: ${workflow.name} #${workflow.run_number}`,
+              body: `## CI Failure Detected\n\n**Workflow:** ${workflow.name}\n**Run:** #${workflow.run_number}\n**Link:** ${runUrl}\n\n### Failed Jobs\n${failedJobsList}\n\nPlease investigate the failing checks.`,
+              labels: ['ci-failure', 'automated']
+            });

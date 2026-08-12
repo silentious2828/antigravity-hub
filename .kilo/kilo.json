@@ -1,0 +1,15 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "snapshot": false,
+  "mcp": {
+    "nteract": {
+      "type": "local",
+      "command": ["npx", "-y", "@nteract/mcp-server"]
+    },
+    "jupyter": {
+      "type": "local",
+      "command": ["uvx", "mcp-jupyter"],
+      "enabled": true
+    }
+  }
+}

@@ -1,0 +1,351 @@
+@media (max-width: 767px) {
+  .previewCMS {
+    display: none;
+  }
+  .upcomingevents_box {
+    height: 230px !important;
+  }
+  .owl-carousel .owl-item img {
+    height: 230px !important;
+  }
+  .upcomingevents_box .comingevents_title {
+    font-size: 17px !important;
+  }
+  .comingevents_time,
+  .comingevents_place {
+    margin-top: 3px !important;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .upcomingevents_box .comingevents_title {
+    font-size: 22px !important;
+  }
+  .comingevents_time,
+  .comingevents_place {
+    margin-top: 15px !important;
+  }
+}
+.minSize1 > span {
+  line-height: 10px;
+}
+.grayBackground {
+  height: 30px !important;
+}
+.clickdform .alignTop {
+  vertical-align: inherit !important;
+}
+@media (max-width: 767px) {
+  .navbar-brand {
+    margin-top: 0px !important;
+  }
+  #logo-white,
+  #logo-color {
+  }
+  .responsiveCellSize1 {
+    width: 340px !important;
+    min-width: 340px !important;
+  }
+  .clickdform .minSize1 {
+    width: 300px !important;
+    min-width: 300px !important;
+  }
+  .clickdform .maxSize1 {
+    max-width: 330px !important;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-brand {
+    margin-top: 0px !important;
+  }
+  #logo-white,
+  #logo-color {
+  }
+  .responsiveCellSize1 {
+    width: 240px !important;
+    min-width: 240px !important;
+  }
+  .clickdform .minSize1 {
+    width: 200px !important;
+    min-width: 200px !important;
+  }
+  .clickdform .maxSize1 {
+    max-width: 200px !important;
+  }
+}
+.navbar-default.scroll .navbar-offcanvas {
+  background-color: #fff !important;
+}
+
+.text-muted {
+  display: none !important;
+}
+#ValidationSummaryProfileFormView a {
+  color: red !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.alert-danger {
+  background-color: #fff !important;
+}
+.validation-summary a {
+  color: red !important;
+}
+.our_clients_section {
+  background: #fff !important;
+}
+.navbar-default .navbar-nav > li > a {
+  border: 0px solid !important;
+}
+#filterDropdownId {
+  display: none !important;
+}
+
+@media (max-width: 1199px) {
+  .sitSearch1 {
+    padding-left: 15px !important;
+  }
+  .banner_text_2 {
+    font-size: 18px !important;
+  }
+  .banner_text_2_manipulate {
+    margin-bottom: 15px !important;
+  }
+  .navbar-nav .open .dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .sitSearch1 {
+    padding-left: 15px !important;
+  }
+  .banner_text_2 {
+    font-size: 20px !important;
+  }
+  .navbar-nav .open .dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+  }
+  .profileCSS {
+    display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .profileCSS {
+    display: block !important;
+  }
+  .banner_text_2_manipulate {
+    margin-bottom: 45px !important;
+  }
+
+  .banner {
+    height: 170px;
+    background: #bf0812
+      url(https://www.singaporetech.edu.sg/sites/all/themes/sit_corporate/images/red_banner_bg.jpg)
+      no-repeat;
+  }
+  .banner > img {
+    height: 290px !important;
+    display: none;
+  }
+  .banner_overlap {
+    margin-top: 35px !important;
+  }
+  .banner_button {
+    height: 112px !important;
+  }
+  .banner_button_text {
+    width: 85% !important;
+  }
+  .banner_button_text {
+    padding-top: 10px !important;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-default .navbar-nav > li > a {
+    color: #777 !important;
+  }
+}
+@media (min-width: 991px) {
+  .profileCSS {
+    display: none !important;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #fff;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .banner_button_text {
+    padding-top: 30px !important;
+  }
+}
+.banner_button_icon img {
+  width: 60% !important;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.banner_button_icon {
+  position: relative;
+  float: left;
+  width: 30% !important;
+  text-align: right;
+  /* margin-left: 74px; */
+}
+
+.modal-body,
+.modal-header,
+.modal-footer {
+  padding: 15px 25px !important;
+}
+.divmodel {
+  border-radius: 4px;
+  padding: 10px;
+  width: 575 px;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.modal-open .modal {
+  width: 100% !important;
+  margin-top: 50px;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 4px !important;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.well > a > img {
+  display: none;
+}
+
+/*.well
+{
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}*/
+.modal-backdrop.in {
+  opacity: 0 !important;
+}
+.modal-backdrop {
+  z-index: 1 !important;
+}
+.close {
+  opacity: 1 !important;
+}
+#slcTerms div > dl {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: inline-flex;
+  padding-left: 15px;
+}
+#slcTerms div > dl dt {
+  margin-right: 5px;
+  font-weight: normal;
+  white-space: nowrap;
+}
+.level2 {
+  padding-left: 25px;
+}
+#MobMenu {
+  background-color: rgb(128, 0, 0);
+}
+.sort-enabled > a {
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  color: #000 !important;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.table-custom th,
+.table-custom td {
+  font-weight: 400;
+  font-size: 15px;
+}
+.table-custom th {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+.table-custom td {
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+}
+.text-muted {
+  display: none !important;
+}
+.Declare {
+  color: rgb(0, 0, 0);
+  text-transform: none;
+  text-indent: 0px;
+  letter-spacing: normal;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  word-spacing: 0px;
+  float: none;
+  display: inline !important;
+  white-space: normal;
+  orphans: 2;
+  widows: 2;
+  background-color: rgb(255, 255, 255);
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  -webkit-text-stroke-width: 0px;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+}
+#sit_promocode {
+  width: 46% !important;
+}
+.btn-register-menu {
+  border-radius: 4 !important;
+  background-color: #800 !important;
+  border-color: #fff !important;
+  color: #fff !important;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.modal-body,
+.modal-header,
+.modal-footer {
+  padding-bottom: 45px !important;
+}
+#sit_declaration_label:after {
+  content: " " !important;
+  color: red;
+}

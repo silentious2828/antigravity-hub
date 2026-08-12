@@ -1,0 +1,1220 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+/* Homepage */
+.page-index .banner-container {
+    position: relative
+}
+
+    .page-index .banner-container .bx-wrapper .bx-prev {
+        background: url(../images/slider-btn-left.png) no-repeat center center;
+    }
+
+    .page-index .banner-container .bx-wrapper .bx-next {
+        background: url(../images/slider-btn-right.png) no-repeat center center;
+    }
+
+    .page-index .banner-container .bx-wrapper .bx-controls-direction a {
+        margin-top: -30px;
+        width: 35px;
+        height: 60px;
+        z-index: 999;
+    }
+
+    .page-index .banner-container .bx-wrapper .bx-pager {
+        bottom: 0
+    }
+
+.page-index .login-area {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #EAEAEC
+}
+
+    .page-index .login-area h3 {
+        background-color: #C5C5C7;
+        margin: 0;
+        padding: 5px 15px
+    }
+
+        .page-index .login-area h3 em {
+            font-style: normal;
+            font-weight: 300
+        }
+
+.page-index .login-container {
+    padding: 10px 5px 20px;
+    font-size: 0.8em
+}
+
+    .page-index .login-container a {
+        display: inline-block;
+        margin: 0 10px;
+        padding-right: 38px;
+        background: url(../images/arrow-black.png) center right no-repeat;
+    }
+
+.page-index .news-events {
+    display: table;
+    overflow: hidden;
+    margin: 0
+}
+
+    .page-index .news-events > li {
+        display: table-cell;
+        width: 33.33%;
+    }
+
+        .page-index .news-events > li:nth-child(1) {
+            background-color: #258903
+        }
+
+        .page-index .news-events > li:nth-child(2) {
+            background-color: #207903
+        }
+
+        .page-index .news-events > li:nth-child(3) {
+            background-color: #1a5f03
+        }
+
+    .page-index .news-events li a {
+        color: #fff;
+        text-decoration: none;
+        display: block
+    }
+
+        .page-index .news-events li a img {
+            width: 100%
+        }
+
+        .page-index .news-events li a:hover .news-container {
+            margin-left: 5%
+        }
+
+.page-index .news-thumb {
+    overflow: hidden
+}
+
+.page-index .news-container {
+    padding: 0 20px 10px;
+    width: 95%
+}
+
+    .page-index .news-container h4 {
+        font-size: 0.95em;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 10px
+    }
+
+    .page-index .news-container h2 {
+        font-size: 1.6em;
+        font-weight: 300;
+        margin-top: 0
+    }
+
+.page-index .news-events li a img,
+.page-index .news-container {
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.page-index .news-events li a:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.page-index .quicklink {
+    display: table;
+    width: 100%;
+    background-color: #313231;
+    height: 100%;
+    margin: 0
+}
+
+    .page-index .quicklink > li {
+        display: table-cell;
+        width: 33.33%;
+        color: #fff;
+        font-size: 0.95em;
+        height: 100%;
+        vertical-align: top;
+    }
+
+    .page-index .quicklink a {
+        display: block;
+        height: 100px;
+        color: #fff;
+        text-decoration: none;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        position: relative;
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        -moz-transition: all .5s;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+
+        .page-index .quicklink a:after {
+            position: absolute;
+            content: "";
+            width: 55px;
+            height: 55px;
+            background: url(../images/arrow-white.png) center center no-repeat;
+            right: 30px;
+            bottom: 10px;
+            -moz-transition: all .5s;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+        }
+
+        .page-index .quicklink a:hover {
+            background-size: 120% 120%
+        }
+
+            .page-index .quicklink a:hover:after {
+                right: 10px
+            }
+
+.page-index .register-alumni-events a {
+    background-image: url(../images/register-alumni-events-bg.jpg)
+}
+
+.page-index .club-republic a {
+    background-image: url(../images/club-republic-bg.jpg);
+}
+
+.page-index .polls-survey a {
+    background-image: url(../images/polls-survey-bg.gif)
+}
+
+@media only screen and (max-width: 768px) {
+    .page-index .login-panel {
+        position: static;
+    }
+
+    .page-index .news-events {
+        display: block;
+    }
+
+        .page-index .news-events > li {
+            display: block;
+            width: 100%;
+        }
+
+    .page-index .quicklink > li {
+        display: block;
+        width: 100%
+    }
+    /*.page-index .club-republic a,
+	.page-index .club-republic a:hover {min-height:105px; background-size:auto}*/
+    .page-index .login-area {
+        position: static;
+    }
+
+    .page-index .login-container {
+        text-align: center
+    }
+
+        .page-index .login-container a {
+            display: block;
+            width: 160px;
+            margin: 0 auto
+        }
+}
+
+@media only screen and (max-width: 480px) {
+    .page-index .quicklink a::after {
+        background-size: 30px 30px;
+        right: 10px;
+        bottom: 30px
+    }
+}
+
+
+/* My Profile */
+/*.page-my-profile h2 {color:#6fb93a; font-size:2.6em; font-weight:300}
+.page-my-profile h3 {color:#6fb93a; font-weight:300}*/
+.page-my-profile .masthead-container .user-panel {
+    float: left;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 35%;
+    background-color: #6fb93a;
+    overflow: hidden;
+}
+
+.page-my-profile .masthead-container .user-avatar {
+    float: left;
+}
+
+.page-my-profile .masthead-container .user-name {
+    float: left;
+    padding: 20px 15px 0;
+    font-size: 1.3em;
+    line-height: 1.1;
+    color: #fff;
+    width: 250px;
+}
+
+    .page-my-profile .masthead-container .user-name em {
+        font-size: 1.2em;
+        display: block;
+        font-style: normal;
+        font-weight: 300
+    }
+
+.page-my-profile .masthead-container .masthead-portfolio {
+    float: right;
+    width: 65%;
+}
+
+.page-my-profile .masthead-portfolio {
+    background: url(../images/masthead-my-profile.jpg) center right no-repeat;
+    height: 140px;
+    position: relative;
+}
+
+    .page-my-profile .masthead-portfolio h1 {
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        color: #6fb93a;
+        font-size: 5em;
+        font-weight: 300;
+    }
+
+.page-my-profile .form-personal-details {
+    padding: 20px 30px;
+    clear: both
+}
+
+    .page-my-profile .form-personal-details h2 {
+        margin-top: 0
+    }
+
+.page-my-profile .form-horizontal {
+    margin-top: 20px
+}
+
+    .page-my-profile .form-horizontal .control-label {
+        font-size: 0.9em;
+        font-weight: 400;
+        padding-right: 0
+    }
+
+.page-my-profile .radio label, .page-my-profile .checkbox label {
+    font-size: 0.9em
+}
+
+.page-my-profile .form-control {
+    padding: 3px 5px;
+    font-size: 0.9em
+}
+
+.page-my-profile .form-group {
+    margin-bottom: 10px
+}
+
+.page-my-profile .form-seperator {
+    margin-top: 15px
+}
+
+.page-my-profile .button-action {
+    text-align: right
+}
+
+
+@media only screen and (max-width: 960px) {
+    .page-my-profile .masthead-container .user-panel, .page-my-profile .masthead-container .masthead-portfolio {
+        float: none;
+        width: 100%;
+    }
+
+    .page-my-profile .masthead-container .page-my-profile .masthead-portfolio {
+        background-size: cover;
+        background-position: left center;
+    }
+
+    .page-my-profile .form-seperator {
+        margin-top: 0
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .page-my-profile .masthead-container .masthead-portfolio {
+        height: 165px;
+    }
+
+        .page-my-profile .masthead-container .masthead-portfolio h1 {
+            right: auto;
+            left: 20px
+        }
+}
+
+
+/* Landing */
+.page-landing .main-container {
+}
+
+.page-landing .widget {
+    background-color: #f4f2f4;
+    padding: 15px;
+    margin-top: 5px
+}
+
+.page-landing h2 {
+    color: #6fb93a;
+    font-size: 1.7em;
+    font-weight: 300;
+    margin-top: 0
+}
+
+    .page-landing h2 b {
+        font-size: 1.2em;
+        display: block
+    }
+
+.page-landing h3 {
+    font-weight: 300;
+    font-size: 1.6em
+}
+
+.page-landing .listing-announcement li {
+    padding: 5px 20px 5px 0;
+    font-size: 0.8em;
+    border-top: 1px solid #ccc;
+    margin-right: -15px;
+}
+
+    .page-landing .listing-announcement li a {
+        color: #006600;
+        font-style: italic;
+        text-decoration: underline
+    }
+
+.page-landing .widget-list {
+    width: 20%;
+    float: right;
+}
+
+.page-landing .widget-poll {
+    font-size: 0.9em
+}
+
+    .page-landing .widget-poll button {
+        background-color: #449f20;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 0;
+        padding: 5px 20px;
+        font-size: 0.9em;
+    }
+
+        .page-landing .widget-poll button i {
+            font-size: 0.9em
+        }
+
+.list-masonry {
+    width: 80%;
+    float: left;
+}
+
+    .list-masonry .list-masonry-column {
+        width: 25%;
+        float: left;
+        height: 100%;
+    }
+
+        .list-masonry .list-masonry-column a {
+            margin: 2% 2% 0 0;
+            display: block;
+            text-decoration: none;
+            line-height: 1;
+            position: relative
+        }
+
+            .list-masonry .list-masonry-column a .tiles-title {
+                display: block;
+                color: #fff;
+                font-size: 1.8em;
+                font-weight: 300;
+                position: absolute;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 5%
+            }
+
+                .list-masonry .list-masonry-column a .tiles-title b {
+                    display: block;
+                    font-size: 1.2em
+                }
+
+            .list-masonry .list-masonry-column a .tiles-desc {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                color: #fff;
+                padding: 20px;
+                opacity: 0;
+                transition: all 0.5s ease;
+            }
+
+                .list-masonry .list-masonry-column a .tiles-desc h3 {
+                    margin-top: 0
+                }
+
+            .list-masonry .list-masonry-column a:hover .tiles-desc {
+                opacity: 1
+            }
+
+    .list-masonry .link-update-profile {
+        height: 48%;
+        background: rgb(97,214,50) url(../images/icon-update-profile.png) right top no-repeat
+    }
+
+        .list-masonry .link-update-profile .tiles-title {
+            bottom: 10px
+        }
+
+        .list-masonry .link-update-profile .tiles-desc {
+            background: rgb(97,214,50)
+        }
+
+    .list-masonry .link-feedback {
+        height: 30%;
+        background: rgb(255,192,0) url(../images/icon-change-password.png) right bottom no-repeat;
+    }
+
+        .list-masonry .link-feedback .tiles-desc {
+            background: rgb(255,192,0)
+        }
+
+    .list-masonry .link-dREAM {
+        height: 20%;
+        background: rgb(3,115,239) url(../images/icon-dREAM.png) top right no-repeat;
+    }
+
+        .list-masonry .link-dREAM .tiles-title {
+            bottom: 0
+        }
+
+        .list-masonry .link-dREAM .tiles-desc {
+            background: rgb(3,115,239)
+        }
+
+    .list-masonry .link-change-password {
+        height: 40%;
+        background: rgb(211,121,251) url(../images/icon-edu-training.png) right bottom no-repeat
+    }
+
+        .list-masonry .link-change-password .tiles-desc {
+            background: rgb(211,121,251)
+        }
+
+    .list-masonry .link-edu-training {
+        height: 59%;
+        background: #ff639f url(../images/icon-feedback.png) 40px bottom no-repeat
+    }
+
+        .list-masonry .link-edu-training .tiles-title {
+            top: 25%
+        }
+
+        .list-masonry .link-edu-training .tiles-desc {
+            background: #ff639f
+        }
+
+    .list-masonry .link-register-events {
+        height: 59%;
+        background: rgb(203,224,78) url(../images/icon-register-events.png) top right no-repeat
+    }
+
+        .list-masonry .link-register-events .tiles-title {
+            bottom: 15%
+        }
+
+        .list-masonry .link-register-events .tiles-desc {
+            background: rgb(203,224,78)
+        }
+
+    .list-masonry .link-club-membership {
+        height: 40%;
+        background: rgb(255,47,121) url(../images/icon-view-payments.png) 100% 120px no-repeat
+    }
+
+        .list-masonry .link-club-membership .tiles-title {
+            top: 10%
+        }
+
+        .list-masonry .link-club-membership .tiles-desc {
+            background: rgb(255,47,121)
+        }
+
+    .list-masonry .link-career-dev {
+        height: 30%;
+        background: rgb(174,14,248) url(../images/icon-career-dev.png) right -60px no-repeat
+    }
+
+        .list-masonry .link-career-dev .tiles-title {
+            bottom: 0
+        }
+
+        .list-masonry .link-career-dev .tiles-desc {
+            background: rgb(174,14,248)
+        }
+
+    .list-masonry .link-view-payments {
+        height: 48%;
+        background: rgb(127,125,135) url(../images/icon-club-membership.png) right top no-repeat;
+    }
+
+        .list-masonry .link-view-payments .tiles-title {
+            bottom: 0
+        }
+
+        .list-masonry .link-view-payments .tiles-desc {
+            background: rgb(127,125,135)
+        }
+
+    .list-masonry .link-yearbook {
+        height: 20%;
+        background: #1ab7ea url(../images/icon-yearbook.png) right 10px no-repeat
+    }
+
+        .list-masonry .link-yearbook .tiles-title {
+            bottom: 0
+        }
+
+        .list-masonry .link-yearbook .tiles-desc {
+            background: #1ab7ea
+        }
+
+@media only screen and (max-width: 960px) {
+    .page-landing .widget-list, .list-masonry {
+        float: none;
+        width: auto;
+        clear: both;
+        height: 700px;
+    }
+
+        .list-masonry .list-masonry-column a .tiles-title {
+            font-size: 1.6em
+        }
+}
+
+@media only screen and (max-width: 768px) {
+    .list-masonry .list-masonry-column {
+        width: 50%;
+        height: 500px;
+        margin-bottom: 2px
+    }
+
+        .list-masonry .list-masonry-column a .tiles-title {
+            font-size: 1.4em
+        }
+}
+
+/* Login */
+.grey-area {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #eee;
+}
+/*.form-panel {padding:40px 20px; overflow:hidden}*/
+.form-panel .captcha-code {
+    background-color: #eee;
+    padding: 20px;
+    overflow: hidden;
+    color: #fff;
+    line-height: 1.1
+}
+
+    .form-panel .captcha-code img {
+        float: left;
+        margin-right: 20px
+    }
+
+    .form-panel .captcha-code a {
+        color: #fff;
+    }
+
+.page-login .main-container {
+}
+
+.page-login .button-action {
+    text-align: right
+}
+
+
+/* About Us */
+.page-about-us .committee-photo {
+    margin-bottom: 30px
+}
+
+.page-about-us .committee-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    line-height: 1.1
+}
+
+.page-about-us .committee-name {
+    color: #66cc33;
+    font-size: 1.4em;
+    margin-bottom: 20px
+}
+
+
+/* View Events */
+.page-view-events .events-slider {
+    overflow: hidden;
+}
+    /* Modified on 24 Nov, remove grey color background */
+    .page-view-events .events-slider li {
+        border: 1px solid #ccc
+    }
+        /* Modified on 24 Nov, remove grey color background */
+        .page-view-events .events-slider li .events-thumb {
+            border-bottom: 1px solid #ccc
+        }
+
+        .page-view-events .events-slider li .events-details {
+            padding: 10px;
+            min-height: 280px
+        }
+
+        .page-view-events .events-slider li .date {
+            text-transform: uppercase;
+            font-weight: bold
+        }
+
+        .page-view-events .events-slider li h2 {
+            font-size: 1.7em;
+            margin-top: 10px
+        }
+
+        .page-view-events .events-slider li .view-more {
+            border-top: 1px solid #ccc;
+        }
+
+            .page-view-events .events-slider li .view-more a {
+                color: #333;
+                text-align: center;
+                display: block;
+                padding: 10px;
+                font-size: 1.1em;
+                font-weight: 600;
+                text-decoration: none
+            }
+
+                .page-view-events .events-slider li .view-more a:hover {
+                    background-color: #2A9400;
+                    color: #fff;
+                }
+/* Modified on 24 Nov, hover style for view more button */
+@media only screen and (max-width: 768px) {
+    .page-view-events .events-slider li {
+        margin-bottom: 50px
+    }
+
+        .page-view-events .events-slider li .events-details {
+            min-height: 50px
+        }
+}
+
+/* Individual Events */
+.page-individual-events .events-gallery-slider {
+    float: left;
+    width: 66%
+}
+
+.page-individual-events aside {
+    float: right;
+    width: 31%;
+}
+
+.page-individual-events .event-details li {
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 15px
+}
+
+    .page-individual-events .event-details li h5 {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0
+    }
+
+    .page-individual-events .event-details li p {
+        margin: 0
+    }
+
+.page-individual-events .events-gallery-pager {
+    text-align: center;
+    padding: 10px 0;
+    position: relative
+}
+
+    .page-individual-events .events-gallery-pager .events-gallery-thumb {
+        margin: 0 0.5%;
+        display: inline-block;
+        width: 15%
+    }
+
+    .page-individual-events .events-gallery-pager div {
+    }
+
+    .page-individual-events .events-gallery-pager .events-gallery-slider-next,
+    .page-individual-events .events-gallery-pager .events-gallery-slider-prev {
+        top: 50%;
+        margin-top: -20px;
+        position: absolute;
+    }
+
+    .page-individual-events .events-gallery-pager .events-gallery-slider-next {
+        right: 0
+    }
+
+    .page-individual-events .events-gallery-pager div a {
+        display: inline-block;
+        width: 25px;
+        height: 40px;
+    }
+
+    .page-individual-events .events-gallery-pager .bx-prev {
+        background: url(../images/btn-individual-events-left.png) center center no-repeat
+    }
+
+    .page-individual-events .events-gallery-pager .bx-next {
+        background: url(../images/btn-individual-events-right.png) center center no-repeat
+    }
+
+.page-individual-events .event-desc {
+    background-color: #e3e3e3;
+    clear: both;
+    background-color: #f5f5f5;
+    float: left;
+    width: 66%;
+    box-sizing: border-box;
+    padding: 10px 20px
+}
+
+    .page-individual-events .event-desc .date {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.9em
+    }
+
+    .page-individual-events .event-desc h1 {
+        color: #66cc33;
+        font-size: 1.7em;
+        margin: 10px 0
+    }
+
+.page-individual-events aside a.btn {
+    float: right;
+}
+
+@media only screen and (max-width: 960px) {
+    .page-individual-events .events-gallery-slider,
+    .page-individual-events aside,
+    .page-individual-events .event-desc {
+        float: none;
+        width: 100%;
+        margin-bottom: 10px;
+        overflow: hidden
+    }
+}
+
+/* View Polls & Surveys */
+.page-view-poll-surveys .table thead tr th {
+    text-transform: uppercase;
+    background-color: #e0e0e0;
+    border: 0 none !important
+}
+
+.modal.membership-registration .radio-group {
+    margin-bottom: 30px
+}
+
+
+/* Our Merchants */
+.page-our-merchants h1 {
+}
+
+.page-our-merchants .merchants-slider {
+}
+    /* Modified on 24 Nov, remove grey color background */
+    .page-our-merchants .merchants-slider article {
+        border: 1px solid #ccc
+    }
+    /* Modified on 24 Nov, add border to each tile */
+    .page-our-merchants .merchants-slider .merchants-thumb {
+        border-bottom: 1px solid #ccc
+    }
+
+    .page-our-merchants .merchants-slider .merchants-details {
+        background-color: #fff;
+        padding: 10px 5px 10px 10px;
+        height: 250px
+    }
+
+    .page-our-merchants .merchants-slider h5 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.9em;
+        margin: 5px 0
+    }
+
+    .page-our-merchants .merchants-slider h2 {
+        margin: 10px 0 0;
+    }
+
+@media only screen and (min-width: 769px) {
+    .page-our-merchants .merchants-slider .merchants-thumb {
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .page-our-merchants .merchants-slider h5 {
+        margin: 20px 0 0
+    }
+
+    .page-our-merchants .merchants-slider li {
+        margin-bottom: 30px
+    }
+}
+
+
+/* dREam Magazine */
+.page-dream-magazine .issue-date {
+    margin: 10px 0 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9em
+}
+
+    .page-dream-magazine .issue-date i {
+        color: #6fb93a;
+        font-style: normal
+    }
+
+.page-dream-magazine .magazine-cover {
+    width: 180px
+}
+
+/* OTP Form */
+.page-otp-form .grey-area {
+    padding: 20px
+}
+
+.page-otp-form .form-group {
+    margin: 20px 0
+}
+
+.page-otp-form .control-label {
+    font-weight: normal;
+    float: left;
+    padding-top: 8px
+}
+
+.page-otp-form .form-input {
+    margin-left: 50px;
+}
+
+.page-otp-form .form-control {
+    width: 100%;
+    background-color: #fff
+}
+
+.page-otp-form .resend-otp {
+    padding-top: 8px
+}
+
+.page-otp-form .button-action {
+    clear: both;
+    padding: 20px 0
+}
+
+@media only screen and (max-width: 768px) {
+    .page-otp-form .resend-otp {
+        text-align: right
+    }
+}
+
+/* Contact Us */
+.page-contact-us .captcha-img {
+    background-color: #246490;
+    padding: 10px;
+    color: #fff;
+    line-height: 1.2;
+    font-size: 0.95em
+}
+
+    .page-contact-us .captcha-img img {
+        float: left;
+        margin-right: 10px
+    }
+
+    .page-contact-us .captcha-img a {
+        color: #fff;
+        text-decoration: underline
+    }
+
+.page-contact-us .button-action {
+    text-align: right
+}
+
+/* Continuing Education and Training */
+.page-continuining-education h1 {
+    margin-bottom: 0
+}
+
+.page-continuining-education .row {
+    margin-top: 40px
+}
+
+@media only screen and (min-width: 981px) {
+    .page-continuining-education h4 {
+        margin-top: 0
+    }
+}
+
+
+/* Discussion Forum */
+.page-discussion-forum .forum-list dt {
+    background-color: #e0e0e0;
+}
+
+.page-discussion-forum .forum-list dt,
+.page-discussion-forum .forum-list dd {
+    padding: 10px 20px;
+    overflow: hidden
+}
+
+.page-discussion-forum .forum-list .forum-meta {
+    font-size: 0.85em;
+    color: #999;
+    line-height: 1.1;
+    padding-top: 5px
+}
+
+    .page-discussion-forum .forum-list .forum-meta span {
+        display: inline-block;
+    }
+
+        .page-discussion-forum .forum-list .forum-meta span.forum-time {
+            border-left: 1px solid #ccc;
+            padding: 0 10px;
+            margin-left: 10px
+        }
+
+.page-discussion-forum .discussion-submenu a {
+    font-size: 0.9em;
+    color: #333;
+    display: inline-block;
+    padding: 0 10px;
+    border-left: 1px solid #333;
+    line-height: 1
+}
+
+    .page-discussion-forum .discussion-submenu a:first-child {
+        border-left: 0;
+        padding-left: 0
+    }
+
+    .page-discussion-forum .discussion-submenu a.active {
+        font-size: 1.1em;
+        font-weight: bold
+    }
+
+.page-discussion-forum .discussion-entry {
+    overflow: hidden;
+    padding: 20px 0;
+    border-top: 1px solid #aaa
+}
+
+    .page-discussion-forum .discussion-entry:first-child {
+        border-top: 0 none
+    }
+
+.page-discussion-forum .discussion-thumb {
+    float: left
+}
+
+.page-discussion-forum .discussion-item {
+    margin-left: 100px
+}
+
+.page-discussion-forum .discussion-username {
+    margin-bottom: 20px;
+    font-weight: bold
+}
+
+.page-discussion-forum .discussion-action a {
+    display: inline-block;
+    font-size: 0.85em;
+    padding: 0 10px;
+    border-left: 1px solid #333;
+    line-height: 1;
+    color: #333;
+    text-decoration: underline
+}
+
+    .page-discussion-forum .discussion-action a:first-child {
+        border-left: 0 none;
+        padding-left: 0
+    }
+
+.page-discussion-forum textarea {
+    background-color: #fff;
+}
+
+.page-discussion-forum .button-action {
+    padding-top: 20px;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 0.9em
+}
+
+@media only screen and (min-width: 769px) {
+    .page-discussion-forum .forum-list .forum-item {
+        float: left;
+        width: 70%;
+    }
+
+    .page-discussion-forum .forum-list .forum-meta {
+        float: right;
+        width: 30%;
+        text-align: right
+    }
+
+    .page-discussion-forum .discussion-msg {
+        float: left;
+        width: 70%
+    }
+
+    .page-discussion-forum .discussion-action {
+        float: right;
+        widows: 30%
+    }
+}
+
+
+/* News */
+.page-news .news-entry {
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px
+}
+
+.page-news .news-thumb {
+    float: left
+}
+
+.page-news .news-item {
+    margin-left: 320px
+}
+
+    .page-news .news-item h5 {
+        text-transform: uppercase;
+        margin-top: 0
+    }
+
+    .page-news .news-item .news-action {
+        font-style: italic;
+        margin-top: 20px
+    }
+
+@media only screen and (max-width: 480px) {
+	
+    .page-news .news-thumb {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+    }
+
+    .page-news .news-item {
+        margin: 10px 0 0;
+		padding-top: 5px !important;
+    }
+}
+
+/* Individual News */
+.page-individual-news .published-date {
+    font-weight: bold;
+    margin-bottom: 20px
+}
+
+
+/* My Club Republic Membership */
+.page-club-republic-membership .grey-area {
+    padding: 20px
+}
+
+    .page-club-republic-membership .grey-area h3 {
+        margin: 0 10px 20px;
+        font-weight: bold
+    }
+
+.page-club-republic-membership .button-action {
+    text-align: right
+}
+
+    .page-club-republic-membership .button-action button {
+        text-align: left;
+        line-height: 1.3;
+        text-transform: uppercase;
+        font-size: 0.9em
+    }
+
+.page-club-republic-membership .active-membership button {
+    width: 140px;
+}
+
+.page-club-republic-membership .membership-log-sheet {
+    margin-top: 40px
+}
+
+    .page-club-republic-membership .membership-log-sheet table {
+    }
+
+.yearbook-list > div {
+    margin-bottom: 30px
+}
+
+.news-msg {
+    padding-top: 5px;
+}
+
+.NewsHidden {
+    display: none;
+}
+
+.btn-light-green {
+    background-color: #6fb93a;
+    color: white;
+}
+
+    .btn-light-green:hover {
+        background-color: green;
+        color: white;
+    }
+
+.bg-infoRed {
+    color: #C10000;
+}

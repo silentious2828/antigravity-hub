@@ -1,0 +1,7 @@
+﻿Tier,Role focus,Responsibilities (agents / owners),Example agent types
+Tier 1 — Junior,"Task execution, low autonomy",Single‑purpose agents; deterministic workflows; supervised by higher tier,"Data ingestors, simple scrapers, formatters"
+Tier 2 — Intermediate,"Reliable automation, basic decision logic",Parameterized agents; simple retrievers; monitored outputs,"Retriever agents, basic classifier agents"
+Tier 3 — Senior,"Complex tasks, error handling, evaluation",Multi‑step agents; RAG pipelines; local fallback logic; unit tests,"RAG orchestrator, content generator with safety filters"
+Tier 4 — Staff,"Cross‑agent coordination, resilience",Orchestration agents; retry/backoff; observability hooks; SLA ownership,"Workflow conductor, scheduling agent, retrain trigger agent"
+Tier 5 — Principal,"System design, performance & safety",Architecture owners; capacity planning; governance enforcement; runbooks,"Enterprise orchestrator, policy enforcement agent, drift manager"
+Tier 6 — Distinguished/Architect,Strategic research & governance,Novel orchestration patterns; cross‑domain optimization; external validation; publishable designs,"Meta‑orchestrator, adaptive routing with learning, compliance adjudicator"

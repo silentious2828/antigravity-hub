@@ -1,0 +1,51 @@
+[2026-08-12T23:45:02.314Z] [Gmail Strategist] [logistics-priority]
+├── Request ID: req_a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d
+├── Chain: logistics-priority (Priority Strategy)
+├── Node 1: DeepSeek-V4-Pro → ✅ SUCCESS (200)
+│   ├── Latency: 1,102ms
+│   ├── Tokens: 1,342 in / 1,118 out
+│   ├── Compression: Caveman Engine Active (~22% reduction detected)
+│   └── Context Relay: ✅ Session State Synchronised
+└── Total Processing Time: 1,102ms
+
+[2026-08-12T23:45:15.482Z] [Gmail Strategist] [logistics-priority]
+├── Request ID: req_b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e
+├── Chain: logistics-priority (Priority Strategy)
+├── Node 1: DeepSeek-V4-Pro → ❌ RATE_LIMIT (429)
+│   ├── Latency: 1,247ms
+│   ├── Error: "Rate limit exceeded: 100 RPM"
+│   ├── Cooldown: 2min (auto-triggered)
+│   └── Circuit Breaker: OPEN
+├── Node 2: Mistral Small 3.2 → ✅ SUCCESS (Fallback)
+│   ├── Latency: 892ms
+│   ├── Tokens: 1,247 in / 892 out
+│   ├── Compression: RTK active (18% reduction)
+│   └── Context Relay: ✅ Handoff Summary Injected
+└── Total Failover Time: 1,892ms
+
+[2026-08-12T23:45:22.891Z] [Outlook Strategist] [outlook-cleanup-budget]
+├── Request ID: req_c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f
+├── Chain: outlook-cleanup-budget (Fill-First Strategy)
+├── Node 1: Mistral Free Tier → ✅ SUCCESS (200)
+│   ├── Latency: 654ms
+│   ├── Tokens: 892 in / 634 out
+│   ├── Compression: RTK active (29% reduction)
+│   └── Quota Remaining: 87%
+└── Total Processing Time: 654ms
+
+[2026-08-12T23:45:35.127Z] [Outlook Strategist] [outlook-cleanup-budget]
+├── Request ID: req_d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a
+├── Chain: outlook-cleanup-budget (Fill-First Strategy)
+├── Node 1: Mistral Free Tier → ❌ QUOTA_EXHAUSTED (429)
+│   ├── Latency: 312ms
+│   ├── Error: "Daily quota exceeded: 1000 requests"
+│   └── Quota Remaining: 0%
+├── Node 2: Gemma Free Tier → ❌ QUOTA_EXHAUSTED (429)
+│   ├── Latency: 198ms
+│   ├── Error: "Daily quota exceeded: 800 requests"
+│   └── Quota Remaining: 0%
+└── Node 3: Local Llama 3.2 → ✅ SUCCESS (Fallback)
+    ├── Latency: 1,456ms
+    ├── Tokens: 1,124 in / 876 out
+    ├── Compression: Caveman Engine Active (38% reduction)
+    └── Context Relay: ✅ Session preserved

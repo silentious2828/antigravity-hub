@@ -1,0 +1,732 @@
+{
+  "settings": {
+    "cloudEnabled": true,
+    "tailscaleEnabled": false,
+    "tailscaleUrl": "",
+    "stickyRoundRobinLimit": 3,
+    "disableSessionStickiness": true,
+    "promptCacheAffinityEnabled": true,
+    "comboStrategy": "round-robin",
+    "comboStickyRoundRobinLimit": null,
+    "providerStrategies": {},
+    "quotaVisibility": {},
+    "requestRetry": 3,
+    "maxRetryIntervalSec": 30,
+    "antigravitySignatureCacheMode": "enabled",
+    "oidcEnabled": false,
+    "oidcIssuer": "",
+    "oidcClientId": "",
+    "oidcClientSecret": "",
+    "oidcScopes": [
+      "openid",
+      "profile",
+      "email"
+    ],
+    "oidcRedirectPath": "/api/auth/oidc/callback",
+    "oidcAllowedSubjects": [],
+    "mcpEnabled": false,
+    "a2aEnabled": false,
+    "hiddenSidebarItems": [],
+    "hiddenSidebarGroupLabels": [],
+    "sidebarSectionOrder": [],
+    "sidebarItemOrder": {},
+    "sidebarActivePreset": "all",
+    "hideEndpointCloudflaredTunnel": false,
+    "hideEndpointTailscaleFunnel": false,
+    "hideEndpointNgrokTunnel": false,
+    "preferClaudeCodeForUnprefixedClaudeModels": false,
+    "claudeClassifierCompat": "always",
+    "autoRefreshProviderQuota": true,
+    "credentialRedactionEnabled": true,
+    "autoRefreshProviderQuotaInterval": 180,
+    "comboConfigMode": "expert",
+    "comboAutoPromoteEnabled": false,
+    "codexServiceTier": {
+      "enabled": true,
+      "tier": "priority",
+      "supportedModels": [
+        "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-5.6-luna",
+        "gpt-5.5"
+      ]
+    },
+    "claudeFastMode": {
+      "enabled": true,
+      "supportedModels": [
+        "claude-fable-5",
+        "claude-opus-5",
+        "claude-opus-4-8",
+        "claude-opus-4-7",
+        "claude-opus-4-6"
+      ]
+    },
+    "responsesPreviousResponseIdMode": "auto",
+    "alwaysPreserveClientCache": "auto",
+    "idempotencyWindowMs": 5000,
+    "wsAuth": false,
+    "maxBodySizeMb": 10,
+    "debugMode": true,
+    "logToolSources": false,
+    "localOnlyManageScopeBypassEnabled": true,
+    "localOnlyManageScopeBypassPrefixes": [
+      "/api/mcp/"
+    ],
+    "customBannedSignals": [],
+    "proxyEnabled": true,
+    "perKeyProxyEnabled": false,
+    "customSystemPromptEnabled": true,
+    "customSystemPrompt": "You are a trusted AI assistant.",
+    "hidePaidModels": false,
+    "codexAutoPing": {
+      "connections": {}
+    },
+    "adaptiveVolumeRouting": true,
+    "autoRoutingDefaultVariant": "lkgp",
+    "backgroundDegradation": {
+      "enabled": true,
+      "degradationMap": {
+        "claude-opus-4-6": "gemini-3-flash",
+        "claude-opus-4-6-thinking": "gemini-3-flash",
+        "claude-opus-4-5-20251101": "gemini-3-flash",
+        "claude-sonnet-4-5-20250929": "gemini-3-flash",
+        "claude-sonnet-4-20250514": "gemini-3-flash",
+        "claude-sonnet-4": "gemini-3-flash",
+        "gemini-3.1-pro": "gemini-3-flash",
+        "gemini-3.1-pro-high": "gemini-3-flash",
+        "gemini-3-pro-preview": "gemini-3-flash-preview",
+        "gemini-2.5-pro": "gemini-3-flash",
+        "gpt-4o": "gpt-4o-mini",
+        "gpt-5": "gpt-5-mini",
+        "gpt-5.1": "gpt-5-mini",
+        "gpt-5.1-codex": "gpt-5.1-codex-mini"
+      },
+      "detectionPatterns": [
+        "generate a title",
+        "generate title",
+        "create a title",
+        "create a short",
+        "summarize this",
+        "summarize the",
+        "write a brief",
+        "write a summary",
+        "one-line summary",
+        "one line summary",
+        "short description",
+        "brief description",
+        "conversation title",
+        "chat title",
+        "name this conversation",
+        "name this chat",
+        "title for this",
+        "suggest a title",
+        "label this"
+      ]
+    },
+    "blockedProviders": [
+      "opencode"
+    ],
+    "call_log_pipeline_enabled": false,
+    "cliCompatProviders": [
+      "antigravity"
+    ],
+    "codexConnectionDefaultsMigrationV1": {
+      "completedAt": "2026-08-03T16:46:56.543Z",
+      "updatedConnectionIds": [],
+      "legacyFastEnabled": false
+    },
+    "codex_catalog_revalidated_version": "next:UYDCnf0hoWAvVR78KKPni",
+    "comboDefaults": {
+      "strategy": "round-robin",
+      "maxRetries": 1,
+      "retryDelayMs": 2000,
+      "fallbackDelayMs": 0,
+      "handoffThreshold": 0.85,
+      "handoffModel": "",
+      "maxMessagesForSummary": 30,
+      "maxComboDepth": 3,
+      "trackMetrics": true,
+      "reasoningTokenBufferEnabled": true,
+      "zeroLatencyOptimizationsEnabled": true,
+      "resetAwareQuotaCacheTtlMs": 0,
+      "resetAwareQuotaCacheMaxStaleMs": 0
+    },
+    "echoRequestedModelName": true,
+    "fallbackStrategy": "round-robin",
+    "mcpTransport": "stdio",
+    "memoryEmbeddingProviderModel": null,
+    "memoryEmbeddingSource": "auto",
+    "memoryEnabled": false,
+    "memoryMaxTokens": 2000,
+    "memoryRerankEnabled": false,
+    "memoryRerankProviderModel": null,
+    "memoryRetentionDays": 30,
+    "memoryStaticEnabled": false,
+    "memoryStrategy": "hybrid",
+    "memoryTransformersEnabled": false,
+    "memoryVectorStore": "auto",
+    "model_sync_last_run": "2026-08-10T09:30:57.251Z",
+    "modelsDevSyncEnabled": false,
+    "providerOverrides": {},
+    "provider_limits_auto_sync_last_run": "2026-08-10T09:31:06.256Z",
+    "qdrantCollection": "omniroute_memory",
+    "qdrantEmbeddingModel": "openai/text-embedding-3-small",
+    "qdrantEnabled": false,
+    "qdrantHost": "",
+    "qdrantPort": 6333,
+    "resilienceSettings": {
+      "requestQueue": {
+        "autoEnableApiKeyProviders": true,
+        "requestsPerMinute": 180,
+        "minTimeBetweenRequestsMs": 100,
+        "concurrentRequests": 16,
+        "maxWaitMs": 15000,
+        "maxQueueDepth": 0
+      },
+      "connectionCooldown": {
+        "oauth": {
+          "baseCooldownMs": 30000,
+          "useUpstreamRetryHints": false,
+          "maxBackoffSteps": 4
+        },
+        "apikey": {
+          "baseCooldownMs": 2000,
+          "useUpstreamRetryHints": true,
+          "maxBackoffSteps": 3
+        }
+      },
+      "providerBreaker": {
+        "oauth": {
+          "failureThreshold": 2,
+          "degradationThreshold": 1,
+          "resetTimeoutMs": 30000
+        },
+        "apikey": {
+          "failureThreshold": 3,
+          "degradationThreshold": 2,
+          "resetTimeoutMs": 15000
+        }
+      },
+      "waitForCooldown": {
+        "enabled": true,
+        "maxRetries": 3,
+        "maxRetryWaitSec": 30,
+        "maxRetryWaitMs": 30000,
+        "budgetMs": 300000
+      },
+      "comboCooldownWait": {
+        "enabled": true,
+        "maxWaitMs": 90000,
+        "maxAttempts": 5,
+        "budgetMs": 300000
+      },
+      "quotaShareConcurrencyLimit": {
+        "enabled": true
+      },
+      "providerCooldown": {
+        "enabled": false,
+        "minRetryCooldownMs": 5000,
+        "maxRetryCooldownMs": 300000
+      },
+      "quotaPreflight": {
+        "enabled": false,
+        "defaultThresholdPercent": 2,
+        "warnThresholdPercent": 20,
+        "providerWindowDefaults": {}
+      },
+      "streamRecovery": {
+        "enabled": false,
+        "continueMidStream": false
+      },
+      "providerQuotaOverrides": {}
+    },
+    "sessionAffinityTtlMs": 0,
+    "setupComplete": true,
+    "skillsEnabled": true,
+    "systemPrompt": {
+      "prefixPrompt": "",
+      "suffixPrompt": "",
+      "enabled": false
+    },
+    "systemTransforms": {
+      "providers": {
+        "claude": {
+          "enabled": true,
+          "pipeline": [
+            {
+              "kind": "drop_paragraph_if_contains",
+              "needles": [
+                "github.com/anomalyco/opencode",
+                "opencode.ai/docs",
+                "github.com/cline/cline",
+                "github.com/getcursor/cursor",
+                "continue.dev",
+                "github.com/open-webui/open-webui",
+                "openwebui.com",
+                "docs.openwebui.com",
+                "@earendil-works/pi-coding-agent",
+                "/.pi/",
+                "Pi documentation (read only when the user asks about pi itself",
+                "hermes-agent.nousresearch.com",
+                "github.com/NousResearch/hermes-agent"
+              ]
+            },
+            {
+              "kind": "drop_paragraph_if_starts_with",
+              "prefixes": [
+                "You are OpenCode",
+                "You are Open WebUI",
+                "You are Hermes Agent"
+              ]
+            },
+            {
+              "kind": "replace_text",
+              "match": "if OpenCode honestly",
+              "replacement": "if the assistant honestly",
+              "allOccurrences": true
+            },
+            {
+              "kind": "replace_text",
+              "match": "Here is some useful information about the environment you are running in:",
+              "replacement": "Environment context you are running in:",
+              "allOccurrences": true
+            },
+            {
+              "kind": "obfuscate_words",
+              "words": [
+                "opencode",
+                "open-code",
+                "cline",
+                "roo-cline",
+                "roo_cline",
+                "cursor",
+                "windsurf",
+                "aider",
+                "continue.dev",
+                "copilot",
+                "avante",
+                "codecompanion",
+                "openwebui",
+                "open-webui",
+                "hermes-agent",
+                "hermes"
+              ],
+              "targets": [
+                "system",
+                "messages",
+                "tools"
+              ]
+            }
+          ]
+        },
+        "anthropic-compatible-cc": {
+          "enabled": true,
+          "pipeline": [
+            {
+              "kind": "drop_paragraph_if_contains",
+              "needles": [
+                "github.com/open-webui/open-webui",
+                "openwebui.com",
+                "docs.openwebui.com"
+              ]
+            },
+            {
+              "kind": "drop_paragraph_if_starts_with",
+              "prefixes": [
+                "You are Open WebUI"
+              ]
+            },
+            {
+              "kind": "obfuscate_words",
+              "words": [
+                "openwebui",
+                "open-webui"
+              ],
+              "targets": [
+                "system",
+                "messages",
+                "tools"
+              ]
+            },
+            {
+              "kind": "drop_paragraph_if_contains",
+              "needles": [
+                "github.com/anomalyco/opencode",
+                "opencode.ai/docs",
+                "github.com/cline/cline",
+                "github.com/getcursor/cursor",
+                "continue.dev"
+              ]
+            },
+            {
+              "kind": "drop_paragraph_if_starts_with",
+              "prefixes": [
+                "You are OpenCode"
+              ]
+            },
+            {
+              "kind": "replace_text",
+              "match": "if OpenCode honestly",
+              "replacement": "if the assistant honestly",
+              "allOccurrences": true
+            },
+            {
+              "kind": "replace_text",
+              "match": "Here is some useful information about the environment you are running in:",
+              "replacement": "Environment context you are running in:",
+              "allOccurrences": true
+            },
+            {
+              "kind": "prepend_system_block",
+              "text": "You are a Claude agent, built on Anthropic's Claude Agent SDK.",
+              "idempotencyKey": "claude-agent-sdk-identity"
+            },
+            {
+              "kind": "inject_billing_header",
+              "entrypoint": "sdk-cli",
+              "versionFormat": "ex-machina",
+              "cchAlgo": "sha256-first-user",
+              "buildRevision": "250"
+            }
+          ]
+        },
+        "antigravity": {
+          "enabled": false,
+          "pipeline": []
+        }
+      }
+    },
+    "thinkingBudget": {
+      "mode": "auto",
+      "customBudget": 10240,
+      "effortLevel": "medium"
+    },
+    "webSearchRouteModel": "antigravity/gemini-3.6-flash-low"
+  },
+  "providerConnections": [
+    {
+      "id": "179a96e6-2525-49b5-a5e9-aa4ae869f2b6",
+      "provider": "kilo-gateway",
+      "authType": "apikey",
+      "name": "main",
+      "priority": 1,
+      "isActive": true,
+      "testStatus": "active",
+      "backoffLevel": 0,
+      "lastTested": "2026-08-10T09:51:29.305Z",
+      "apiKey": "free",
+      "providerSpecificData": {
+        "importFreeModelsOnly": true,
+        "apiKeyHealth": {}
+      },
+      "consecutiveUseCount": 0,
+      "rateLimitProtection": false,
+      "proxyEnabled": true,
+      "perKeyProxyEnabled": false,
+      "quotaVisible": true,
+      "createdAt": "2026-08-08T18:45:18.838Z",
+      "updatedAt": "2026-08-10T09:51:29.305Z",
+      "maxConcurrent": null,
+      "quotaWindowThresholds": null,
+      "rateLimitOverrides": null
+    },
+    {
+      "id": "eb6118d8-3525-4e71-af0f-400ceeadac88",
+      "provider": "antigravity",
+      "authType": "oauth",
+      "name": "samleongp88@gmail.com",
+      "email": "samleongp88@gmail.com",
+      "priority": 1,
+      "isActive": true,
+      "accessToken": "ya29.a0ARGnu0YJyr4YyKEuFgp11SH6ooSJRH7NaLfiDjb1hxQooy9_K59kuA1MsHOBG03VGM9e7jUj3GZ6DG363ypnD8FRvCFGxtsYqJSG3kp5bgwljQYwzHA3ySDasuXb8F-SR1UTwz7BOhtp7PD4FD4PXVVcthj8hnkB_gmnB-YVTx1jjbVEBdcmm9RI1hC-B0QAP0Y5xKWpG-VzwwaCgYKAYASARISFQHGX2Miilq3g38xsZerL8vDx7T3rQ0213",
+      "refreshToken": "1//0gczeyOIphaWuCgYIARAAGBASNwF-L9IrVx-DXwkk7MkOYj5NXmEdWU63Pn0LCyc_b8B4Z_FSR1x7_4e4YDB_Y5OYPpuy3Fl6dJQ",
+      "expiresAt": "2026-08-10T10:30:55.879Z",
+      "tokenExpiresAt": "2026-08-10T10:30:55.879Z",
+      "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cclog https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/experimentsandconfigs https://www.googleapis.com/auth/userinfo.email",
+      "projectId": "hip-advice-mt8c4",
+      "testStatus": "active",
+      "backoffLevel": 0,
+      "lastHealthCheckAt": "2026-08-09T21:35:54.232Z",
+      "lastTested": "2026-08-10T09:51:29.032Z",
+      "providerSpecificData": {
+        "clientProfile": "ide",
+        "projectId": "hip-advice-mt8c4",
+        "tier": "g1-plus-tier",
+        "subscriptionTier": "Google AI Plus",
+        "plan": "Plus",
+        "apiKeyHealth": {}
+      },
+      "expiresIn": 3599,
+      "consecutiveUseCount": 0,
+      "rateLimitProtection": false,
+      "proxyEnabled": true,
+      "perKeyProxyEnabled": false,
+      "quotaVisible": true,
+      "createdAt": "2026-08-09T18:49:32.680Z",
+      "updatedAt": "2026-08-10T09:51:29.033Z",
+      "maxConcurrent": null,
+      "quotaWindowThresholds": null,
+      "rateLimitOverrides": null
+    },
+    {
+      "id": "49f9b196-832b-47a5-8e64-abe31b7eb78e",
+      "provider": "openrouter",
+      "authType": "apikey",
+      "name": "main",
+      "priority": 1,
+      "isActive": true,
+      "testStatus": "active",
+      "backoffLevel": 0,
+      "lastTested": "2026-08-10T09:51:29.026Z",
+      "apiKey": "free",
+      "providerSpecificData": {
+        "importFreeModelsOnly": true,
+        "autoSync": true,
+        "apiKeyHealth": {}
+      },
+      "consecutiveUseCount": 0,
+      "rateLimitProtection": false,
+      "proxyEnabled": true,
+      "perKeyProxyEnabled": false,
+      "quotaVisible": true,
+      "createdAt": "2026-08-08T18:24:05.501Z",
+      "updatedAt": "2026-08-10T09:51:29.026Z",
+      "maxConcurrent": null,
+      "quotaWindowThresholds": null,
+      "rateLimitOverrides": null
+    },
+    {
+      "id": "021143d7-2931-4e3c-8467-821966b62887",
+      "provider": "nvidia",
+      "authType": "apikey",
+      "name": "main",
+      "priority": 1,
+      "isActive": true,
+      "testStatus": "active",
+      "backoffLevel": 0,
+      "lastTested": "2026-08-10T09:51:28.967Z",
+      "apiKey": "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",
+      "providerSpecificData": {
+        "importFreeModelsOnly": true,
+        "autoSync": true,
+        "apiKeyHealth": {}
+      },
+      "consecutiveUseCount": 0,
+      "rateLimitProtection": false,
+      "proxyEnabled": true,
+      "perKeyProxyEnabled": false,
+      "quotaVisible": true,
+      "createdAt": "2026-08-08T18:18:58.130Z",
+      "updatedAt": "2026-08-10T09:51:28.967Z",
+      "maxConcurrent": null,
+      "quotaWindowThresholds": null,
+      "rateLimitOverrides": null
+    },
+    {
+      "id": "1aacdd4d-f58c-4676-8a48-3765ff115af0",
+      "provider": "opencode",
+      "authType": "apikey",
+      "name": "OpenCode Account 1",
+      "priority": 1,
+      "isActive": true,
+      "testStatus": "active",
+      "backoffLevel": 0,
+      "lastTested": "2026-08-10T09:51:28.579Z",
+      "providerSpecificData": {
+        "fingerprints": [],
+        "accountProxies": [],
+        "autoSync": false,
+        "apiKeyHealth": {}
+      },
+      "consecutiveUseCount": 0,
+      "rateLimitProtection": false,
+      "proxyEnabled": true,
+      "perKeyProxyEnabled": false,
+      "quotaVisible": true,
+      "createdAt": "2026-08-05T16:42:33.304Z",
+      "updatedAt": "2026-08-10T09:51:28.580Z",
+      "maxConcurrent": null,
+      "quotaWindowThresholds": null,
+      "rateLimitOverrides": null
+    },
+    {
+      "id": "263bb338-8c27-4cd6-ab9d-1cabf6ab57c3",
+      "provider": "agy",
+      "authType": "oauth",
+      "name": "samleongp88@gmail.com",
+      "email": "samleongp88@gmail.com",
+      "priority": 1,
+      "isActive": true,
+      "accessToken": "ya29.a0ARGnu0YYF9nvYRNDkaDWSYiYpEU9XMZP_6f-wgnFatwYlvdfXLM0cz8yeQG-ghEcIbb7OG9vbR_CTENqpndaKJpE8noVzq8FrMA4DPJwRUIOb-Oe8N2eaaArUQpMaxfl4KbjcikjnGX4edqB8w4GpBA7MGXrYii3QI8rq8sF1V8j-BCEbIbcBScoaYkyM_NVBBwDWVU9pzRs2QaCgYKAbQSARISFQHGX2MiQyxpPtK23FWAAdDTsEU9BA0213",
+      "refreshToken": "1//0gVXIKrkFmdN4CgYIARAAGBASNwF-L9Irj_23Nf82hhvA-pCBm2qCdsHpGXXmYAJcBUG5que9785yemATD5p0E5JI7DKrKmTg1mo",
+      "expiresAt": "2026-08-10T10:30:59.807Z",
+      "tokenExpiresAt": "2026-08-10T10:30:59.807Z",
+      "scope": "https://www.googleapis.com/auth/cclog https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/experimentsandconfigs",
+      "projectId": "hip-advice-mt8c4",
+      "testStatus": "active",
+      "backoffLevel": 0,
+      "healthCheckInterval": 60,
+      "lastHealthCheckAt": "2026-08-10T09:31:00.809Z",
+      "lastTested": "2026-08-10T09:51:28.014Z",
+      "providerSpecificData": {
+        "clientProfile": "ide",
+        "projectId": "hip-advice-mt8c4",
+        "tier": "g1-plus-tier",
+        "autoSync": true,
+        "importFreeModelsOnly": true,
+        "apiKeyHealth": {},
+        "subscriptionTier": "Google AI Plus",
+        "plan": "Plus"
+      },
+      "expiresIn": 3599,
+      "consecutiveUseCount": 0,
+      "rateLimitProtection": false,
+      "proxyEnabled": true,
+      "perKeyProxyEnabled": false,
+      "quotaVisible": true,
+      "createdAt": "2026-08-08T18:20:27.359Z",
+      "updatedAt": "2026-08-10T09:51:28.014Z",
+      "maxConcurrent": null,
+      "quotaWindowThresholds": null,
+      "rateLimitOverrides": null
+    },
+    {
+      "id": "51b8d19a-941a-4982-964e-a579fcdae93c",
+      "provider": "ollama-local",
+      "authType": "apikey",
+      "name": "main",
+      "priority": 1,
+      "isActive": true,
+      "testStatus": "active",
+      "backoffLevel": 0,
+      "lastTested": "2026-08-10T09:51:27.989Z",
+      "apiKey": "free",
+      "providerSpecificData": {
+        "baseUrl": "http://localhost:11434/v1",
+        "apiKeyHealth": {}
+      },
+      "consecutiveUseCount": 0,
+      "rateLimitProtection": false,
+      "proxyEnabled": true,
+      "perKeyProxyEnabled": false,
+      "quotaVisible": true,
+      "createdAt": "2026-08-08T18:44:46.491Z",
+      "updatedAt": "2026-08-10T09:51:27.989Z",
+      "maxConcurrent": null,
+      "quotaWindowThresholds": null,
+      "rateLimitOverrides": null
+    },
+    {
+      "id": "771e23c8-53f2-42a9-9af4-f6cf64dd6e3a",
+      "provider": "kiro",
+      "authType": "oauth",
+      "priority": 1,
+      "isActive": true,
+      "accessToken": "aoaAAAAAGp5qGUQSRhTBnbmoYGJ59-pn8x6RjQHrkJg4o-AQ2AuW-jwAM2hhbUrwbCNwcw73Fg3CJfA44ZnWwnOrECkc0:MGUCMQDFYdUrxFgzLRWq7iIvEV/hsK4KjD3nwdnm2rFQpToZIkl+ebPQYLfLr37BWgC//aMCMCpXT9CkSlXVWKMYE8UxEj1qqjiQxzZgyacg5JDKUs7ickb+DMkp4ToBcSkSdFur2g",
+      "refreshToken": "aorAAAAAGrlpl0O1HhmMJ2_Oy7kcK16dAsWbvbmmnAxQ8gfDuQiY7WjJIlUZxSO45zXmEYyh0Hbqab9UIY556ck9ECkc0:MGQCMDa9gFgoqZ0DduQNcmv1b5tS97JLz3YirRA94zYatW8EcYt9KjpctKxcjuhvsWGwwgIwT2lnGMkGLCrZPpB3ElLPA7LKONYRIZq4Bk64lttiXuajpDQvk4XAdEA/its0MjUC",
+      "expiresAt": "2026-08-10T10:31:01.635Z",
+      "tokenExpiresAt": "2026-08-10T10:31:01.635Z",
+      "testStatus": "active",
+      "backoffLevel": 0,
+      "lastHealthCheckAt": "2026-08-10T09:31:01.638Z",
+      "lastTested": "2026-08-10T09:51:27.958Z",
+      "providerSpecificData": {
+        "authMethod": "imported",
+        "provider": "Google",
+        "profileArn": "arn:aws:codewhisperer:us-east-1:699475941385:profile/EHGA3GRVQMUK",
+        "autoSync": true,
+        "apiKeyHealth": {}
+      },
+      "consecutiveUseCount": 0,
+      "rateLimitProtection": false,
+      "proxyEnabled": true,
+      "perKeyProxyEnabled": false,
+      "quotaVisible": true,
+      "createdAt": "2026-08-08T18:42:09.991Z",
+      "updatedAt": "2026-08-10T09:51:27.959Z",
+      "maxConcurrent": null,
+      "quotaWindowThresholds": null,
+      "rateLimitOverrides": null
+    },
+    {
+      "id": "b8663346-8343-4490-8207-67f73076924d",
+      "provider": "mimocode",
+      "authType": "apikey",
+      "name": "MiMoCode Account 1",
+      "priority": 1,
+      "isActive": false,
+      "testStatus": "error",
+      "errorCode": "upstream_error",
+      "lastError": "Provider validation endpoint not supported",
+      "lastErrorAt": "2026-08-10T09:31:21.590Z",
+      "lastErrorType": "upstream_error",
+      "lastErrorSource": "upstream",
+      "backoffLevel": 0,
+      "lastTested": "2026-08-10T09:31:21.590Z",
+      "providerSpecificData": {
+        "fingerprints": [],
+        "accountProxies": [],
+        "autoSync": false
+      },
+      "consecutiveUseCount": 0,
+      "rateLimitProtection": false,
+      "proxyEnabled": true,
+      "perKeyProxyEnabled": false,
+      "quotaVisible": true,
+      "createdAt": "2026-08-07T01:06:00.723Z",
+      "updatedAt": "2026-08-10T09:31:21.590Z",
+      "maxConcurrent": null,
+      "quotaWindowThresholds": null,
+      "rateLimitOverrides": null
+    }
+  ],
+  "providerNodes": [],
+  "combos": [],
+  "apiKeys": [
+    {
+      "id": "97e0c2fe-3a8f-488b-9a3e-4c6493daf18e",
+      "name": "Test Antigravity",
+      "key": "sk-aba8e07a0d6ef66e-7bc2ef-ed9bcaee",
+      "machineId": "aba8e07a0d6ef66e",
+      "allowedModels": [],
+      "noLog": false,
+      "createdAt": "2026-08-03T16:56:08.499Z",
+      "revokedAt": null,
+      "expiresAt": null,
+      "lastUsedAt": "2026-08-09T21:19:40.905Z",
+      "keyPrefix": "sk-aba8e07a0",
+      "ipAllowlist": null,
+      "scopes": [
+        "self:usage"
+      ],
+      "allowedCombos": [],
+      "throttleDelayMs": null,
+      "streamDefaultMode": "legacy",
+      "allowedQuotas": [],
+      "disableNonPublicModels": false,
+      "usageLimitEnabled": false,
+      "dailyUsageLimitUsd": null,
+      "weeklyUsageLimitUsd": null,
+      "blockedModels": [],
+      "allowedConnections": [],
+      "autoResolve": false,
+      "isActive": true,
+      "accessSchedule": null,
+      "maxRequestsPerDay": null,
+      "maxRequestsPerMinute": null,
+      "maxSessions": 0,
+      "rateLimits": null,
+      "isBanned": false,
+      "keyHash": "4f174892e012e2adf781e66bef236961f3824d42100e3879af9ee06103b0abe6",
+      "proxyId": null,
+      "allowedEndpoints": [],
+      "allowUsageCommand": false,
+      "chaosModeEnabled": false
+    }
+  ],
+  "_meta": {
+    "exportedAt": "2026-08-10T09:57:01.769Z",
+    "version": "omniroute-v3-legacy-export",
+    "includesHistory": false
+  }
+}

@@ -1,0 +1,23 @@
+# Auth & Tokens
+client_secret.json
+token.json
+token_cache.bin
+.env
+
+# Databases & Logs
+audit/agent_hub.db
+logs/
+*.log
+
+# Python
+__pycache__/
+venv/
+.venv/
+
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/
+
+# Optional dependency locks
+uv.lock

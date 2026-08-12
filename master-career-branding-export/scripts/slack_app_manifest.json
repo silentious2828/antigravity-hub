@@ -1,0 +1,143 @@
+{
+  "display_information": {
+    "name": "Automated AI Enterprise",
+    "description": "Enterprise AI orchestration platform with 34-agent Antigravity cluster for autonomous infrastructure management, monitoring, and deployment.",
+    "background_color": "#1a1a2e",
+    "icon": "https://example.com/icons/ai-enterprise-icon.png",
+    "features": {
+      "bot_user": true,
+      "slash_commands": true,
+      "message_handlers": true,
+      "interactive_message_blocks": true,
+      "workflow_steps": true
+    }
+  },
+  "oauth_config": {
+    "redirect_urls": [
+      "https://your-domain.com/slack/oauth_redirect",
+      "http://localhost:3000/slack/oauth_redirect"
+    ],
+    "scopes": {
+      "bot": [
+        "app_mentions:read",
+        "channels:history",
+        "channels:join",
+        "channels:read",
+        "chat:write",
+        "chat:write.public",
+        "commands",
+        "files:read",
+        "files:write",
+        "groups:history",
+        "groups:read",
+        "im:history",
+        "im:read",
+        "im:write",
+        "incoming-webhook",
+        "reactions:read",
+        "reactions:write",
+        "team:read",
+        "users:read",
+        "users:read.email",
+        "workflow:execute"
+      ],
+      "user": [
+        "channels:history",
+        "channels:read",
+        "chat:write",
+        "groups:history",
+        "groups:read",
+        "im:history",
+        "im:read",
+        "im:write",
+        "users:read"
+      ]
+    }
+  },
+  "settings": {
+    "event_subscriptions": {
+      "request_url": "https://your-domain.com/slack/events",
+      "bot_events": [
+        "app_mention",
+        "channel_created",
+        "channel_deleted",
+        "channel_rename",
+        "channel_archive",
+        "channel_unarchive",
+        "group_archive",
+        "group_unarchive",
+        "member_joined_channel",
+        "member_left_channel",
+        "message.channels",
+        "message.groups",
+        "message.im",
+        "message.mpim",
+        "pin_added",
+        "pin_removed",
+        "reaction_added",
+        "reaction_removed",
+        "star_added",
+        "star_removed",
+        "team_join",
+        "user_change",
+        "workflow_step_execute"
+      ],
+      "user_events": [
+        "user_change"
+      ]
+    },
+    "interactivity": {
+      "is_enabled": true,
+      "request_url": "https://your-domain.com/slack/interactions"
+    },
+    "slash_commands": [
+      {
+        "command": "/ai-status",
+        "description": "Check the current status of all 34 Antigravity agents",
+        "usage_hint": "[agent_id]",
+        "should_escape": false
+      },
+      {
+        "command": "/ai-deploy",
+        "description": "Trigger a deployment phase for the infrastructure cluster",
+        "usage_hint": "<phase_name> [target_agents]",
+        "should_escape": false
+      },
+      {
+        "command": "/ai-audit",
+        "description": "Run a compliance audit across all agent logs",
+        "usage_hint": "[--full] [--since <timestamp>]",
+        "should_escape": false
+      },
+      {
+        "command": "/ai-scale",
+        "description": "Scale the Antigravity agent cluster up or down",
+        "usage_hint": "<up|down> <count>",
+        "should_escape": false
+      },
+      {
+        "command": "/ai-telemetry",
+        "description": "Retrieve real-time telemetry from the Neural Mesh Engine",
+        "usage_hint": "[--format json|table]",
+        "should_escape": false
+      }
+    ],
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false
+  },
+  "features": {
+    "interactive_message_blocks": true,
+    "workflow_steps": {
+      "enabled": true,
+      "available_steps": [
+        "ai_approval_step",
+        "ai_notification_step",
+        "ai_data_collection_step"
+      ]
+    }
+  },
+  "presence": {
+    "is_enabled": false
+  }
+}

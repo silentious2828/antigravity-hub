@@ -1,0 +1,17 @@
+{
+  "mcp_servers": [
+    {
+      "name": "Jupyter AI Tools",
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "fastmcp",
+        "fastmcp",
+        "run",
+        "/Volumes/Orico e7400 1TB/my-project/fastmcp_server.py"
+      ],
+      "env": []
+    }
+  ]
+}

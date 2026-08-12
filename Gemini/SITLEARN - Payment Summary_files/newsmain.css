@@ -1,0 +1,529 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {font-family: 'Lato', sans-serif; font-size:14px;}
+
+main-nav ul, li {margin:0; padding:0; list-style:none;}
+ul, li {margin:0; }
+.news-events > li {margin:0; padding:0; list-style:none}
+.main-nav > ul > li {margin:0; padding:0; list-style:none}
+.main-nav > ul > li > ul > li  {margin:0; padding:0; list-style:none}
+.main-nav >  ul > li > ul > li:hover ul {margin:0; padding:0; list-style:none}
+.main-nav > ul > li:hover ul {margin:0; padding:0; list-style:none}
+
+.main-container ul {margin-bottom:1em;margin:0; padding:0; list-style:none;}
+.homepage-slider {margin-left: 0px !important;}
+a {color: #800000;}
+a:hover {color:#1f1c1d}
+
+
+.wrapper {max-width:1200px; margin:0 auto; width:100%}
+img {max-width:100%}
+.main-container {clear:both;}
+.container-fluid {padding:30px;}
+@media only screen and (max-width: 768px) {
+	body {word-break:break-all;word-break: break-word;}
+	.container-fluid {padding:20px;}
+}
+
+/* Text */
+.title {font-weight:300; color:#6fb93a; margin:0 0 20px}
+.title-container {padding:0 30px}
+.subtitle {font-weight:400; color:#6fb93a;}
+.title b {font-weight:bold;}
+.modal-title {color:#6fb93a;}
+.bg-msg {padding:10px 15px; margin-bottom:0; font-size:1.1em}
+.bg-msg a {color:#c50707; text-decoration:underline}
+.text-red {color:#c50505;}
+.text-green {color:#6c3;}
+.text-magenta {color:#D11D6C}
+.text-blue {color:#126FC1}
+h1 {font-size:2.6em;}
+h2 {font-size:2em;}
+h3 {font-size:1.8em;}
+h4 {font-size:1.4em; text-transform:uppercase; margin-top:40px; font-weight:bold}
+h5 {font-size:1.2em; font-weight:bold}
+p {margin-bottom:1em}
+@media only screen and (max-width: 768px) {
+	h1 {font-size:2.2em;}
+	h2 {font-size:1.8em;}
+	h3 {font-size:1.6em;}
+	.title-container {padding:0 20px}
+		
+}
+
+/* Listing */
+ol {padding-left:20px}
+ol li {list-style:decimal; padding-top:5px}
+ol li li {list-style-type:lower-roman}
+ul.listing-disc li {list-style:disc; margin-left:20px}
+
+/* Accordion */
+.accordion li .accordion-header {padding:10px 0 10px 30px; color:#6fb93a; cursor:pointer; background:url(../images/accordion-expand.png) left center no-repeat}
+.accordion li.expanded .accordion-header {background:url(../images/accordion-collapse.png) left center no-repeat}
+
+/* Pagination */
+.pagination {float:right}
+
+/* Header */
+.header-container {}
+.logo-rp, .logo-alumni {float:left}
+.logo-rp {border-right:1px solid #999; padding:15px 20px; margin-right:15px}
+.welcome-msg {float:right; padding:10px 20px 0 0}
+.welcome-msg span {display:inline-block; border-right:1px solid #999; vertical-align:middle; padding-right:5px; line-height:1.2; margin-right:3px}
+
+@media only screen and (max-width: 800px) {
+	.welcome-msg {display:none}
+}
+@media only screen and (max-width: 768px) {
+	.header-container {}
+	.logo-rp {padding:0 20px;}
+	.logo-alumni img {height:60px}
+	.logo-rp, .logo-alumni {margin-top:20px; margin-bottom:20px}
+}
+@media only screen and (max-width: 600px) {
+	.logo-rp img,
+	.logo-alumni img {height:40px}
+	.logo-rp {padding:0 10px}
+}
+@media only screen and (max-width: 480px) {
+	.logo-rp img, .logo-alumni img {height:30px}
+}
+
+
+/* Slider */
+.slider-multiCol {overflow:hidden;}
+.slider-multiCol .bx-wrapper .bx-prev {background: url(../images/btn-individual-events-left.png) no-repeat center center; left:-35px}
+.slider-multiCol .bx-wrapper .bx-next {background: url(../images/btn-individual-events-right.png) no-repeat center center; right:-35px}
+.slider-multiCol .bx-wrapper .bx-controls-direction a {margin-top:-30px; width:35px;	height:60px; z-index:999;}
+.slider-multiCol .bx-wrapper .bx-pager.bx-default-pager a {text-indent:0; width:auto; height:auto; border-radius:0; background-color:transparent; color:#000; font-family: 'Lato', sans-serif; font-weight:normal; line-height:1}
+.slider-multiCol .bx-wrapper .bx-pager.bx-default-pager a:hover {}
+.slider-multiCol .bx-wrapper .bx-pager.bx-default-pager a.active {font-weight:bold; text-decoration:none}
+.slider-multiCol .bx-wrapper .bx-pager {width:auto; position:static; padding:10px 0; float:right}
+.slider-multiCol .bx-wrapper .bx-pager .bx-pager-item {border-left:1px solid #666}
+.slider-multiCol .bx-wrapper .bx-pager .bx-pager-item:first-child {border:0 none}
+
+/* Navigation */
+.main-nav {clear:both; border-top:1px solid #ccc; font-size:0.95em;}
+.main-nav a {text-decoration:none !important}
+.main-nav > ul {float:right; position:relative}
+.main-nav > ul > li {float:left; margin-right:10px; position:relative}
+.main-nav > ul > li:not(.link-social):hover > a {background-color:#258903; color:#fff}
+.main-nav > ul > li a {display:block; padding:10px 20px; color:#5f5c5c; font-weight:bold}
+.main-nav li.link-social {position:absolute; right:0; top:-40px}
+.main-nav li.link-social a {display:inline-block; border-radius:50%; width:25px; height:25px; line-height:25px; background-color:#636468; text-align:center; color:#fff; padding:0}
+.main-nav ul ul {position:absolute; background-color:#2a9400; min-width:180px; left:0; top:35px; display:none; z-index:100}
+.main-nav ul ul a {display:block; padding:10px 15px; color:#fff; font-size:0.95em}
+.main-nav ul ul a:hover {background-color:#111; color:#fff} /* Modified on 24 Nov, change hover to black */
+.main-nav ul ul li {border-top:1px solid rgba(255,255,255,.5);}
+.main-nav ul ul li:first-child {border:0 none}
+.main-nav > ul > li:hover ul {display:block}
+
+@media only screen and (max-width: 768px) {
+	.main-nav {display:none}
+	.slicknav_menu {display:block; padding:20px }
+}
+@media only screen and (max-width: 600px) {
+	.slicknav_menu .slicknav_icon-bar {width:40px; height:6px}
+	.slicknav_nav {top:90px}
+	.slicknav_nav a {text-decoration:none !important}
+}
+@media only screen and (max-width: 480px) {
+	.slicknav_menu .slicknav_icon-bar {width:30px; height:4px}
+	.slicknav_menu {padding:10px 0}
+}
+
+
+/* Form */
+.form-horizontal .control-label {font-weight:400; padding-right:0; text-align:right}
+.form-control {border-radius:0; background-color:#e0e0e0; box-shadow:none; border:1 none}
+.button-action .btn-submit {background:url(../images/btn-submit.png) left center no-repeat;}
+.button-action .btn-retrieve {background:url(../images/btn-retrieve.html) left center no-repeat;}
+.button-action .btn-cancel {background:url(../images/btn-cancel.png) left center no-repeat;}
+.button-action .btn-add {background:url(../images/btn-add.png) left center no-repeat;}
+.button-action .btn-reply {background:url(../images/btn-reply.png) left center no-repeat;}
+.button-action .btn-renew {background:url(../images/btn-renew.png) left center no-repeat;}
+.button-action .btn-submit, .button-action .btn-cancel, .button-action .btn-add, .button-action .btn-reply, .button-action .btn-renew, .button-action .btn-retrieve {padding:10px 0 10px 45px; border:0 none; font-weight:bold; margin-right:10px; color:#333; display:inline-block}
+.btn-small.btn-cancel {background:url(../images/btn-cancel.png) center center no-repeat; background-size:cover}
+.btn-small.btn-edit {background:url(../images/btn-edit.png) center center no-repeat;}
+.btn-small {display:inline-block; width:23px; height:23px; border:0 none}
+.btn-main {background:#449f20; padding:5px 20px; text-transform:uppercase; font-weight:bold; color:#fff; border-radius:0; border:0 none; box-shadow:none; text-shadow:none}
+.btn-red {background-color:#c00; padding:5px 20px; text-transform:uppercase; font-weight:bold; color:#fff; border-radius:0; border:0 none; box-shadow:none; text-shadow:none}
+.btn-main:hover, .btn-red:hover {background:#333; color:#fff}
+
+
+
+/* table */
+table.table:not(.no-border) > thead > tr > th, table.table:not(.no-border) > tbody > tr > th, 
+table.table:not(.no-border) > tfoot > tr > th, table.table:not(.no-border) > thead > tr > td, 
+table.table:not(.no-border) > tbody > tr > td, table.table:not(.no-border) > tfoot > tr > td {border-top:1px solid #ccc; border-bottom:0 none}
+table.no-border > thead > tr > th, table.no-border > tbody > tr > th, 
+table.no-border > tfoot > tr > th, table.no-border > thead > tr > td, 
+table.no-border > tbody > tr > td, table.no-border > tfoot > tr > td {border:0 none;}
+.table-grey-header {font-size:0.85em;}
+.table-grey-header th {background-color:#E4E4E4; text-transform:uppercase;}
+.table-grey-header th, .table-grey-header td {padding:8px 15px!important}
+div.table-wrapper .table {margin-bottom:0}
+@media only screen and (max-width: 768px) {
+	.table-grey-header th, .table-grey-header td {padding:5px!important}
+}
+
+/* Helper */
+.bg-info {padding:5px 30px; background-color:#f4f2f4; font-size:0.9em;}
+.bg-info a {color:#e82323; text-decoration:underline}
+
+/* Footer */
+.footer-container {clear:both; font-size:0.85em; padding-top:25px; overflow:hidden; padding-bottom:0px !important;}
+.footer-container .footer-info {float:left}
+.footer-container .footer-quicklink {float:right}
+.footer-container .footer-quicklink li {float:left; padding-right:10px; margin-right:10px; border-right:1px solid #999; line-height:1}
+.footer-container .footer-quicklink li:last-child {border:0 none; margin-right:0; padding-right:0}
+.footer-container .footer-quicklink li a {color:#333}
+
+@media only screen and (max-width: 960px) {
+	.footer-container .footer-info,
+	.footer-container .footer-quicklink {float:none; text-align:center}
+	.footer-container .footer-quicklink li {display:inline-block; float:none}
+}
+@media only screen and (max-width: 480px) {
+	.footer-container {font-size:0.8em}
+}
+/*Custom*/
+.RemoveMarginwebpart{margin-bottom:-2px;}
+
+A.ms-signInLink { display:none; }
+
+.errorValidator
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif !important;
+    font-size: 11px !important;
+    color: #F00;
+}
+.ms-core-form-error, .ms-error, .ms-formvalidation, .ms-diffdeletenostrike, .ms-diffdelete {
+    color: #bf0000;
+}
+
+.ms-webpartzone-cell {
+    margin: auto auto 1px; 
+}
+
+.column_Data_label {
+    font-family: Verdana,Arial,Helvetica,sans-serif !important;
+    font-size: 11px !important;
+    color: #F00;
+}
+
+.captcha-code img {
+		float: none !important;
+		margin-right: 20px;
+		width: 25px;
+		height: 25px;
+		cursor:pointer;
+	}
+	
+	.sucessMSGCSS {
+    font-family: Verdana,Arial,Helvetica,sans-serif !important;
+    font-size: 11px !important;
+    color: #bf0000 !important;
+}
+
+.hiddenMenu{
+	display:block;
+}
+
+.showMenu{
+	display:block;
+}
+
+.btn-small {
+    display: inline-block !important;
+    width: 23px !important;
+    height: 23px !important;
+    border: 0 none !important;
+	min-width: 1em !important;
+}
+.paginationCustom
+{
+	text-indent: 0;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background-color: transparent;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+	font-size: .85em !important;
+}
+
+.controlWhite {    
+	background-color: white !important;
+}
+
+/* Helper */
+.bg-infoCustom {padding:5px 30px; background-color:#c6efef; font-size:1.2em; color:#C10000;font-weight :700}
+.bg-infoCustom a {color:#FFFA10; text-decoration:underline}
+
+.loginBorder{
+	border: 2px solid gray !important;
+}
+
+
+/* Top Bar Fix */
+.ms-cui-topBar2 img
+{
+max-width:none;
+}
+
+/* Edit Bar Fix */
+.ms-cui-tabContainer img
+{
+max-width:none;
+} 
+
+/* Add Item Fix */
+.ms-addnew img 
+{
+max-width:none;
+}
+
+.ms-cui-tabContainer img, #suiteBarButtons img {max-width:none !important;}
+
+.ms-siteactions-normal > a:before {
+    content: "\f013"!important;  /* Unicode character for icon font */
+    font-family: FontAwesome !important;   /* Icon font - requires @import listed at top of file */
+    color: #fff !important;  /* Icon color */
+    font-size: 16px; !important; /* Icon size */
+    font-weight: normal !important; /* Removes default bolding that can occur with icon font */
+    padding-top: -5px !important;  /* Spaces down icon from top */	
+    display: block !important;  /* Forces respect of padding */
+}
+.ms-siteactions-root > span > a.ms-core-menu-root{
+	padding-bottom:5px !important;
+	padding-top:0px !important;
+	padding-left:1px !important;
+	padding-right:5px !important;
+}
+#ms-help > a > span
+{
+
+	padding-top:0px !important;
+	padding-left:1px !important;
+}
+
+#s4-bodyContainer{
+	padding-bottom:0px !important;
+}
+.arrowpager{
+    text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+}
+
+#liHomeAdd .accordion-header {
+    padding: 10px 0 10px 30px;
+    color: #6fb93a;
+    cursor: pointer;
+    background: url(../images/accordion-collapse.png) left center no-repeat;
+}
+.ms-cui-dd-text, input.ms-cui-cb-input{
+	height: 19px !important;
+}
+.ms-cui-dd-arrow-button{
+padding-right:9px !important;
+}
+
+.ms-rtestate-write ms-rtestate-field > ul > li {
+	list-style: block !important;
+}
+
+.ms-rteFontFace-20 
+{ 
+     -ms-name: "Arial"; 
+     font-family: "Arial"; 
+}
+.ms-rteFontFace-30 
+{ 
+     -ms-name: "Lato"; 
+     font-family: "Lato"; 
+}
+
+.ms-rteFontFace-31
+{
+   -ms-name: "Bangers";
+   font-family: "Bangers", arial, helvetica, sans-serif;
+}
+
+.ms-rteFontFace-32
+{
+   -ms-name: "Calibri Light";
+   font-family: "Calibri";
+}
+
+.ms-rteFontFace-33
+{
+   -ms-name: "Agency FB";
+   font-family: "Agency FB";
+}
+
+.ms-rteFontFace-34
+{
+   -ms-name: "Aharoni Bold";
+   font-family: "Aharoni";
+}
+
+.ms-rteFontFace-35
+{
+   -ms-name: "Algerian";
+   font-family: "Algerian";
+}
+
+.ms-rteFontFace-36
+{
+   -ms-name: "Almanac MT";
+   font-family: "Almanac MT";
+}
+
+.ms-rteFontFace-37
+{
+   -ms-name: "American Uncial";
+   font-family: "American Uncial";
+}
+
+.ms-rteFontFace-38
+{
+   -ms-name: "Verdana";
+   font-family: "Verdana";
+}
+
+.ms-rteFontFace-39
+{
+   -ms-name: "Arial Black";
+   font-family: "Arial Black";
+}
+
+.ms-rteFontFace-40
+{
+   -ms-name: "Arial Narrow";
+   font-family: "Arial Narrow";
+}
+
+.ms-rteFontFace-41
+{
+   -ms-name: "Arial Narrow Special G1";
+   font-family: "Arial Narrow Special";
+}
+
+.ms-rteFontFace-42
+{
+   -ms-name: "Californian FB";
+   font-family: "Californian FB";
+}
+
+.ms-rteFontFace-43
+{
+   -ms-name: "Cambria";
+   font-family: "Cambria";
+}
+
+.ms-rteFontFace-44
+{
+   -ms-name: "Corbel";
+   font-family: "Corbel";
+}
+
+.ms-rteFontFace-45
+{
+   -ms-name: "Cordia New";
+   font-family: "Cordia New";
+}
+
+.ms-rteFontFace-46
+{
+   -ms-name: "Courier New";
+   font-family: "Courier New";
+}
+
+.ms-rteFontFace-47
+{
+   -ms-name: "Elephant";
+   font-family: "Elephant";
+}
+
+.ms-rteFontFace-48
+{
+   -ms-name: "Vladimir Script";
+   font-family: "Vladimir Script";
+}
+
+.ms-rteFontFace-49
+{
+   -ms-name: "Century";
+   font-family: "Century";
+}
+
+.ms-rteFontFace-50
+{
+   -ms-name: "Stencil";
+   font-family: "Stencil";
+}
+
+.page-about-us  ul > li {	
+list-style:disc !important;
+}
+.page-about-us  ~ li{	
+list-style:disc !important;
+}
+
+div.section-wrapper  ul > li {	
+list-style:disc !important;
+}
+div.section-wrapper  ~ li{	
+list-style:disc !important;
+}
+.homepage-slider li{
+	margin:0; padding:0; list-style:none;
+}
+.homepage-slide li{	
+margin:0; padding:0; list-style:none;
+}
+
+div.bx-viewport ul > li{
+	margin:0; padding:0; list-style:none;
+}
+div.bx-viewport  ~ li{	
+margin:0; padding:0; list-style:none;
+}
+
+@media (min-width: 500px).col-md-5 {		
+    width: 33.33333%;		
+}
+
+.logoutbtn:hover{
+	background:#449f20;
+	color:#fffff;
+}
+.logoutbtncancel:hover{
+	background:#449f20;
+	color:#fffff !important;
+}
+
+			
+@media only screen and (max-width: 480px) {			
+	#s4-bodyContainer{width:100% !important;}		
+	.wrapper {max-width:100%; margin:0 auto; width:100%}	
+
+	#s4-workspace {
+  		-webkit-overflow-scrolling: touch;
+	}
+
+	.tiles-desc p { display : none }	
+}	
+	
+#s4-workspace{overflow-x:hidden;}

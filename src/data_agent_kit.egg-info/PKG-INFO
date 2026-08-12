@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: data-agent-kit
+Version: 0.1.0
+Summary: Google Cloud Data Agent Kit
+Requires-Python: >=3.10
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Provides-Extra: gcp
+Requires-Dist: google-cloud-bigquery>=3.25.0; extra == "gcp"
+Requires-Dist: google-cloud-storage>=3.1.0; extra == "gcp"
+Requires-Dist: google-cloud-logging>=3.10.0; extra == "gcp"
+Requires-Dist: google-cloud-pubsub>=2.25.0; extra == "gcp"
+Requires-Dist: google-cloud-secret-manager>=2.20.0; extra == "gcp"
+Provides-Extra: bigquery
+Requires-Dist: google-cloud-bigquery>=3.25.0; extra == "bigquery"
+Provides-Extra: storage
+Requires-Dist: google-cloud-storage>=3.1.0; extra == "storage"
+Provides-Extra: logging
+Requires-Dist: google-cloud-logging>=3.10.0; extra == "logging"
+Provides-Extra: pubsub
+Requires-Dist: google-cloud-pubsub>=2.25.0; extra == "pubsub"
+Provides-Extra: secret
+Requires-Dist: google-cloud-secret-manager>=2.20.0; extra == "secret"

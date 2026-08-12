@@ -1,0 +1,44 @@
+================================================================================
+OMNIROUTE LOG VALIDATION REPORT
+================================================================================
+Generated: 2026-08-12 23:46:36
+Proxy Log: mock_test/proxy_logs.txt
+Audit Log: mock_test/audit_logs.txt
+
+## Summary
+Total Test Cases: 5
+Passed: 4
+Failed: 0
+Partial/Warning: 1
+
+## Detailed Results
+
+### TC-01: logistics-priority (DeepSeek-V4-Pro)
+Status: ✅ PASS: DeepSeek successfully handled request
+Proxy Log Found: Yes
+
+### TC-02: logistics-priority (DeepSeek-V4-Pro → Mistral Small 3.2)
+Status: ✅ PASS: Failover from DeepSeek to Mistral successful
+Failover Detected: Yes
+Circuit Breaker: ✅ OPEN state confirmed
+
+### TC-03: outlook-cleanup-budget (Mistral/Gemma Free)
+Status: ✅ PASS: Outlook cleanup routed to Mistral Free
+Proxy Log Found: Yes
+
+### TC-04: outlook-cleanup-budget (Fill-First)
+Status: ✅ PASS: Multi-node fallback successful (2 quota events, local fallback confirmed)
+Quota Exhaustion Events: 2
+Local Fallback: Yes
+
+### TC-05: logistics-priority (DeepSeek-V4-Pro)
+Status: ⚠️  WARNING: No draft or send actions found in logs
+Send Actions Detected: 0
+Draft Actions Detected: 0
+
+## Recommendations
+- ⚠️  Review partial/warning cases for potential issues
+
+================================================================================
+END OF REPORT
+================================================================================

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Supplier-Risk Audit — Supply Chain AI | Sam Leong</title>
+<meta name="description" content="Get a free S$500 supplier-risk audit. Share your top 3 manual processes, get an ROI estimate + 7-day implementation roadmap in 48 hours.">
+<style>
+  :root{
+    --bg:#0d1117; --bg2:#161b22; --card:#1c2129; --border:#2d333b;
+    --text:#e6edf3; --muted:#8b949e; --accent:#2f81f7; --gold:#d29922;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       background:var(--bg);color:var(--text);line-height:1.6}
+  a{color:var(--accent);text-decoration:none}
+  .wrap{max-width:640px;margin:0 auto;padding:0 24px}
+  header{padding:64px 0 24px;text-align:center}
+  header h1{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800;letter-spacing:-.02em}
+  header .sub{color:var(--muted);max-width:480px;margin:12px auto 0}
+  .badge{display:inline-block;background:rgba(63,185,80,.12);color:#3fb950;
+         border:1px solid rgba(63,185,80,.35);padding:4px 12px;border-radius:20px;
+         font-size:.85rem;font-weight:600;margin-bottom:20px}
+
+  .steps{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:28px 0 40px}
+  .steps span{background:var(--card);border:1px solid var(--border);border-radius:20px;
+              padding:6px 14px;font-size:.85rem;color:var(--muted)}
+  .steps b{color:var(--gold)}
+
+  form{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:32px;margin-bottom:64px}
+  label{display:block;font-weight:600;margin:20px 0 8px;font-size:.95rem}
+  label small{color:var(--muted);font-weight:400}
+  input,textarea,select{width:100%;background:var(--bg2);border:1px solid var(--border);
+       border-radius:8px;padding:12px 14px;color:var(--text);font-size:1rem;font-family:inherit}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
+  textarea{min-height:120px;resize:vertical}
+  .note{background:rgba(47,129,247,.08);border:1px solid rgba(47,129,247,.3);
+        border-radius:8px;padding:12px 16px;font-size:.85rem;color:var(--muted);margin:16px 0}
+  button{width:100%;background:var(--gold);color:#111;font-weight:700;font-size:1.1rem;
+         padding:16px;border:none;border-radius:8px;cursor:pointer;margin-top:24px;transition:.15s}
+  button:hover{background:#b8860b}
+  button:disabled{opacity:.6;cursor:not-allowed}
+  .ok{display:none;background:rgba(63,185,80,.12);border:1px solid rgba(63,185,80,.4);
+      border-radius:8px;padding:24px;text-align:center;margin-bottom:64px}
+  .ok h2{color:#3fb950;margin-bottom:8px}
+  footer{padding:40px 0;text-align:center;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="badge">Free · $500 value · 48-hour delivery</span>
+    <h1>Supplier-Risk Audit</h1>
+    <p class="sub">I map your top manual supply chain processes to AI automation opportunities — and show you the ROI. No call required. No obligation.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="steps">
+    <span><b>1.</b> You share 3 processes</span>
+    <span><b>2.</b> I map to AI automation</span>
+    <span><b>3.</b> ROI + 7-day roadmap in 48h</span>
+  </div>
+
+  <form id="auditForm" action="mailto:silentious@outlook.com" method="post" enctype="text/plain">
+    <label>Name <small>(required)</small></label>
+    <input type="text" name="Name" required>
+
+    <label>Work email <small>(required)</small></label>
+    <input type="email" name="Email" required>
+
+    <label>Company <small>(required)</small></label>
+    <input type="text" name="Company" required>
+
+    <label>Your role</label>
+    <select name="Role">
+      <option>Head of Procurement</option>
+      <option>Supply Chain Director</option>
+      <option>Operations Director</option>
+      <option>CFO / Financial Controller</option>
+      <option>IT / SAP Manager</option>
+      <option>Managing Director</option>
+      <option>Other</option>
+    </select>
+
+    <label>Your top 3 manual processes <small>(be specific — this is what I audit)</small></label>
+    <textarea name="Processes" placeholder="e.g. 1) Monthly supplier risk scoring by hand&#10;2) Inventory reorder calculation in Excel&#10;3) PO approval follow-up via email" required></textarea>
+
+    <label>ERP / systems in use</label>
+    <select name="ERP">
+      <option>SAP MM</option>
+      <option>SAP (other module)</option>
+      <option>Oracle / NetSuite</option>
+      <option>Excel / spreadsheets</option>
+      <option>Other / multiple</option>
+    </select>
+
+    <div class="note">Want a deeper audit? Attach a sample of your PO history (CSV/XLSX) when we follow up by email — your data drives the numbers.</div>
+
+    <button type="submit">Request my free audit →</button>
+  </form>
+
+  <div class="ok" id="ok">
+    <h2>✓ Audit requested</h2>
+    <p>Opening your email app to confirm. If it didn't open, email me directly at <b>silentious@outlook.com</b> — I'll reply within 48 hours.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><b>Sam Leong</b> · Global Business &amp; AI Automation Leader · Singapore</p>
+    <p style="margin-top:8px"><a href="mailto:silentious@outlook.com">silentious@outlook.com</a> · +65 8917 2828 · <a href="https://linkedin.com/in/samleong2828">LinkedIn</a></p>
+    <p style="margin-top:8px"><a href="index.html">← Back to services</a></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('auditForm').addEventListener('submit', function(e){
+    // mailto doesn't always give feedback; show confirmation regardless
+    setTimeout(function(){
+      document.getElementById('ok').style.display = 'block';
+    }, 300);
+  });
+</script>
+
+</body>
+</html>

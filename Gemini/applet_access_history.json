@@ -1,0 +1,14 @@
+{
+  "applets": [{
+    "lastAccessTime": "2026-08-10T14:13:04.637049Z",
+    "firstAccessTime": "2026-08-10T13:53:01.460392Z",
+    "source": {
+      "sourceType": "SPANNER",
+      "spanner": {
+        "id": "ef0c6dfd-1b20-41fa-b3ab-121472f7360c"
+      }
+    },
+    "name": "CSV Data Visualizer",
+    "description": "Import CSV files from local disk or Google Drive to visualize data with real-time interactive charts and analytics dashboards."
+  }]
+}

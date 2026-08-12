@@ -1,0 +1,2 @@
+[console_scripts]
+data-agent = data_agent_kit.cli:main

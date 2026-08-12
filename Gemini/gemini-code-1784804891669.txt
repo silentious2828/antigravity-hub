@@ -1,0 +1,30 @@
+[Header: Sam Leong - Executive Profile & Contact Data]
+
+[Section 1: Comprehensive Executive Summary & Brand Positioning]
+(Full narrative detailing the 31-year operational baseline, technical evolution, and strategic value proposition).
+
+[Section 2: Detailed Professional Experience — Complete Career History 1995–Present]
+- NCS Group (2021–2026): All project bullets, QA frameworks, and uptime reductions.
+- Digital Bridgestone (2022–2024): .NET MAUI migration & fleet optimization details.
+- Yu Luo Trading Co. Ltd. (2018–2021): Iron ore export & procurement resilience.
+- Helios Marine (2016–2018): Portfolio diversification & trading growth.
+- Global Link Automobile (2006–2016): 12% CAGR scaling across 8+ international markets.
+- Wei Ngiap Motor Pte Ltd (2000–2006): International sales & dealership negotiation.
+- Hua Yang Investment Group (1995–2000): Inventory workflow optimization & operational governance.
+
+[Section 3: Formal Education & Professional Training]
+- Lithan Academy Singapore: Professional Diploma in InfoComm Technology (SAP Material Management & Professional Services).
+
+[Section 4: Complete Master Certifications Catalog]
+- Anthropic AI & MCP Certifications: Building with the Claude API, Model Context Protocol (Advanced/Intro), Agent Skills, Claude 101, AI Capabilities & Limitations.
+- Agile & Scrum: Professional Scrum Master II (PSM II), PSM I, Leadercamp Agile, Change Management.
+- Process & Six Sigma: Black Belt, Green Belt, Yellow Belt, Operational Excellence Work-Out & Kaizen Facilitator, Lean Six Sigma Tools.
+- Data Science, Python & Testing: SQL Basics, Python Essential Training, NumPy & Pandas, R, Selenium Deep Dive, JMeter Performance Testing, Parameterized JUnit Tests.
+- Business Analysis & Enterprise Platforms: Become a Business Analyst, Dynamics 365, SAP ERP/SD Essentials, Power BI.
+
+[Section 5: Multilingual Capabilities]
+- English, Mandarin Chinese, Cantonese, Hokkien, Hainanese (Native/Bilingual or Professional Proficiency).
+
+[Section 6: Community Leadership & Volunteering]
+- New Creation Church Outreach Ministry (2013–2023): Project Manager & Coordinator for island-wide welfare distribution (300+ volunteers managed).
+- SG Care (2017–2022): Care Coordinator across All Saint Home, IMH, and United Medicare Centre.

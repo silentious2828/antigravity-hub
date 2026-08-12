@@ -1,0 +1,183 @@
+Date,Region,Category,Product,Sales_Amount,Units_Sold,Profit_Margin,Customer_Segment
+2026-01-01,North America,Electronics,UltraBook Pro,2499,12,0.32,Enterprise
+2026-01-02,Europe,Audio,NoiseCancel Headphones,299.5,45,0.48,Consumer
+2026-01-03,Asia Pacific,Wearables,Fitness Tracker X,149.99,88,0.55,Consumer
+2026-01-04,North America,Electronics,Curved Monitor 4K,699,24,0.38,Small Business
+2026-01-05,Latin America,Audio,Wireless Earbuds,129,60,0.5,Consumer
+2026-01-06,Europe,Electronics,Mechanical Keyboard,189,34,0.42,Enterprise
+2026-01-07,Asia Pacific,Wearables,Smart Watch Series 5,349,52,0.45,Consumer
+2026-01-08,North America,Audio,Studio Speaker Bar,499,18,0.4,Small Business
+2026-01-09,Europe,Wearables,Fitness Tracker X,149.99,95,0.55,Consumer
+2026-01-10,Latin America,Electronics,UltraBook Pro,2499,8,0.32,Enterprise
+2026-01-11,Asia Pacific,Electronics,Curved Monitor 4K,699,31,0.38,Small Business
+2026-01-12,North America,Wearables,Smart Watch Series 5,349,64,0.45,Consumer
+2026-01-13,Europe,Audio,NoiseCancel Headphones,299.5,58,0.48,Consumer
+2026-01-14,Asia Pacific,Audio,Wireless Earbuds,129,110,0.5,Consumer
+2026-01-15,North America,Electronics,UltraBook Pro,2499,15,0.32,Enterprise
+2026-01-16,Europe,Electronics,Curved Monitor 4K,699,29,0.38,Small Business
+2026-01-17,Latin America,Wearables,Fitness Tracker X,149.99,70,0.55,Consumer
+2026-01-18,Asia Pacific,Electronics,Mechanical Keyboard,189,48,0.42,Enterprise
+2026-01-19,North America,Audio,NoiseCancel Headphones,299.5,50,0.48,Consumer
+2026-01-20,Europe,Wearables,Smart Watch Series 5,349,72,0.45,Consumer
+2026-01-21,Europe,Electronics,UltraBook Pro,356.49,73.96,1,Enterprise
+2026-01-22,Latin America,Wearables,UltraBook Pro,356.51,74.87,1,Enterprise
+2026-01-23,Latin America,Electronics,UltraBook Pro,372.94,76.09,1.03,Enterprise
+2026-01-24,Asia Pacific,Wearables,Fitness Tracker X,391.62,77.78,1.05,Consumer
+2026-01-25,Europe,Audio,UltraBook Pro,403.19,78.85,1.09,Small Business
+2026-01-26,Latin America,Wearables,UltraBook Pro,405.75,81.34,1.13,Enterprise
+2026-01-27,Latin America,Wearables,NoiseCancel Headphones,394.37,79.46,1.12,Small Business
+2026-01-28,Asia Pacific,Audio,NoiseCancel Headphones,380.41,80.86,1.1,Small Business
+2026-01-29,Latin America,Wearables,Curved Monitor 4K,390.28,80.69,1.14,Consumer
+2026-01-30,Latin America,Electronics,UltraBook Pro,386.04,80.56,1.09,Small Business
+2026-01-31,North America,Wearables,Wireless Earbuds,406.51,82.05,1.05,Small Business
+2026-02-01,Latin America,Wearables,Curved Monitor 4K,396.97,85.13,1.01,Consumer
+2026-02-02,Asia Pacific,Wearables,NoiseCancel Headphones,416.86,84.32,1.06,Small Business
+2026-02-03,North America,Electronics,Wireless Earbuds,434.17,88.52,1.03,Small Business
+2026-02-04,Asia Pacific,Electronics,UltraBook Pro,420.68,89.57,1.08,Consumer
+2026-02-05,Asia Pacific,Wearables,Curved Monitor 4K,415.7,93.75,1.04,Enterprise
+2026-02-06,Europe,Wearables,Wireless Earbuds,421.47,92.36,1.03,Small Business
+2026-02-07,Europe,Wearables,Wireless Earbuds,417.9,92.7,1.07,Enterprise
+2026-02-08,Latin America,Electronics,Curved Monitor 4K,410.66,89.44,1.09,Enterprise
+2026-02-09,North America,Audio,UltraBook Pro,421.63,92.61,1.11,Consumer
+2026-02-10,Asia Pacific,Audio,NoiseCancel Headphones,412.17,93.41,1.11,Small Business
+2026-02-11,Europe,Wearables,Wireless Earbuds,397.27,97.39,1.1,Enterprise
+2026-02-12,North America,Wearables,Fitness Tracker X,395.37,93.8,1.07,Small Business
+2026-02-13,Latin America,Electronics,UltraBook Pro,392.41,90.79,1.05,Small Business
+2026-02-14,Europe,Wearables,UltraBook Pro,390.05,86.79,1.01,Small Business
+2026-02-15,North America,Electronics,UltraBook Pro,389.95,91,1.02,Consumer
+2026-02-16,Europe,Audio,Wireless Earbuds,387.34,94.11,1,Consumer
+2026-02-17,Europe,Wearables,NoiseCancel Headphones,388.11,90.4,1.01,Enterprise
+2026-02-18,North America,Wearables,Curved Monitor 4K,403.28,92.23,1.02,Consumer
+2026-02-19,Latin America,Electronics,UltraBook Pro,402.89,88.4,1.02,Consumer
+2026-02-20,Latin America,Wearables,Wireless Earbuds,393.01,92.18,1.06,Enterprise
+2026-02-21,Latin America,Wearables,UltraBook Pro,387.66,88.62,1.04,Enterprise
+2026-02-22,Europe,Wearables,UltraBook Pro,373.28,91.87,1.04,Enterprise
+2026-02-23,Asia Pacific,Wearables,Wireless Earbuds,370.31,90.83,1.03,Consumer
+2026-02-24,Latin America,Electronics,NoiseCancel Headphones,368.75,89.63,1.02,Enterprise
+2026-02-25,Europe,Wearables,NoiseCancel Headphones,374.25,87.9,1.02,Consumer
+2026-02-26,Latin America,Audio,UltraBook Pro,394.4,92.2,1.07,Small Business
+2026-02-27,Asia Pacific,Electronics,UltraBook Pro,391.6,89.62,1.04,Small Business
+2026-02-28,North America,Wearables,Curved Monitor 4K,391.29,93.94,1.07,Enterprise
+2026-03-01,Asia Pacific,Audio,NoiseCancel Headphones,393.52,95.31,1.09,Small Business
+2026-03-02,North America,Wearables,Fitness Tracker X,404.52,98.35,1.11,Enterprise
+2026-03-03,Latin America,Wearables,UltraBook Pro,413.47,99.5,1.07,Enterprise
+2026-03-04,Europe,Audio,Curved Monitor 4K,404.59,99.55,1.09,Consumer
+2026-03-05,Latin America,Wearables,Curved Monitor 4K,417.06,98.16,1.11,Small Business
+2026-03-06,Asia Pacific,Wearables,Curved Monitor 4K,409.57,95.06,1.12,Consumer
+2026-03-07,Asia Pacific,Audio,UltraBook Pro,395.76,95.3,1.14,Enterprise
+2026-03-08,Europe,Electronics,Wireless Earbuds,390.09,95.02,1.13,Consumer
+2026-03-09,Europe,Wearables,Curved Monitor 4K,380.24,92.76,1.12,Small Business
+2026-03-10,Europe,Audio,Fitness Tracker X,395.84,90.59,1.14,Consumer
+2026-03-11,Europe,Wearables,Fitness Tracker X,394.58,95.46,1.17,Small Business
+2026-03-12,Latin America,Wearables,NoiseCancel Headphones,392.35,92.42,1.13,Enterprise
+2026-03-13,Asia Pacific,Wearables,UltraBook Pro,407.45,91.3,1.12,Small Business
+2026-03-14,Asia Pacific,Audio,Wireless Earbuds,399.05,93.55,1.14,Consumer
+2026-03-15,Europe,Audio,Fitness Tracker X,419.62,94.83,1.12,Small Business
+2026-03-16,Latin America,Electronics,Curved Monitor 4K,405.82,91.82,1.1,Small Business
+2026-03-17,Europe,Electronics,NoiseCancel Headphones,389.52,95.71,1.15,Small Business
+2026-03-18,Latin America,Electronics,Wireless Earbuds,386.5,94.95,1.15,Enterprise
+2026-03-19,Asia Pacific,Wearables,NoiseCancel Headphones,378.88,98.02,1.19,Small Business
+2026-03-20,Latin America,Electronics,Wireless Earbuds,371.31,101.8,1.18,Enterprise
+2026-03-21,North America,Audio,UltraBook Pro,387.14,98.22,1.24,Small Business
+2026-03-22,Europe,Electronics,Fitness Tracker X,389.2,98.32,1.26,Consumer
+2026-03-23,Latin America,Audio,Curved Monitor 4K,398.75,96.85,1.21,Small Business
+2026-03-24,Latin America,Wearables,NoiseCancel Headphones,418.77,99.35,1.17,Enterprise
+2026-03-25,Europe,Audio,NoiseCancel Headphones,402.16,98.04,1.16,Small Business
+2026-03-26,Latin America,Electronics,Curved Monitor 4K,399.04,102.21,1.17,Small Business
+2026-03-27,North America,Wearables,Wireless Earbuds,399.59,97.9,1.14,Enterprise
+2026-03-28,North America,Wearables,Wireless Earbuds,402.82,99.59,1.15,Small Business
+2026-03-29,North America,Audio,NoiseCancel Headphones,418.41,104.62,1.14,Small Business
+2026-03-30,Europe,Audio,Curved Monitor 4K,430.07,108.79,1.2,Consumer
+2026-03-31,Europe,Wearables,NoiseCancel Headphones,426.14,112.57,1.27,Enterprise
+2026-04-01,Latin America,Electronics,Wireless Earbuds,413.05,110.58,1.29,Consumer
+2026-04-02,Asia Pacific,Electronics,UltraBook Pro,408.59,116.52,1.25,Consumer
+2026-04-03,Asia Pacific,Audio,UltraBook Pro,409.28,122.01,1.22,Enterprise
+2026-04-04,Latin America,Wearables,Wireless Earbuds,405.45,125.75,1.17,Small Business
+2026-04-05,North America,Electronics,UltraBook Pro,412.07,130.75,1.16,Consumer
+2026-04-06,Asia Pacific,Electronics,NoiseCancel Headphones,429.26,130.31,1.2,Small Business
+2026-04-07,North America,Audio,UltraBook Pro,445.92,128.04,1.25,Consumer
+2026-04-08,Europe,Electronics,NoiseCancel Headphones,427.29,124.56,1.27,Small Business
+2026-04-09,Latin America,Electronics,UltraBook Pro,449.22,124.18,1.27,Consumer
+2026-04-10,Asia Pacific,Wearables,NoiseCancel Headphones,436.69,127.29,1.3,Small Business
+2026-04-11,North America,Audio,UltraBook Pro,450.72,123.04,1.31,Consumer
+2026-04-12,Europe,Wearables,Fitness Tracker X,463.08,120.14,1.28,Small Business
+2026-04-13,North America,Wearables,Curved Monitor 4K,474.23,125.9,1.28,Enterprise
+2026-04-14,Europe,Wearables,NoiseCancel Headphones,455.5,126.7,1.3,Consumer
+2026-04-15,Latin America,Wearables,UltraBook Pro,471.07,133.37,1.35,Consumer
+2026-04-16,Europe,Wearables,Fitness Tracker X,458.78,130.75,1.37,Consumer
+2026-04-17,Latin America,Electronics,Curved Monitor 4K,466.32,133.78,1.43,Small Business
+2026-04-18,Europe,Electronics,NoiseCancel Headphones,451.52,141.09,1.37,Consumer
+2026-04-19,Europe,Wearables,UltraBook Pro,444.26,148.28,1.36,Enterprise
+2026-04-20,Asia Pacific,Electronics,Fitness Tracker X,446.41,155.16,1.32,Consumer
+2026-04-21,Asia Pacific,Electronics,UltraBook Pro,445.23,149.24,1.34,Small Business
+2026-04-22,Latin America,Audio,Fitness Tracker X,467.71,152.46,1.28,Enterprise
+2026-04-23,Europe,Wearables,NoiseCancel Headphones,455.65,151.18,1.24,Small Business
+2026-04-24,Asia Pacific,Audio,Fitness Tracker X,437.07,157.6,1.29,Small Business
+2026-04-25,Latin America,Wearables,Fitness Tracker X,452,155.67,1.31,Enterprise
+2026-04-26,Asia Pacific,Audio,Curved Monitor 4K,450.27,161.45,1.29,Enterprise
+2026-04-27,North America,Wearables,Curved Monitor 4K,461.68,165.53,1.27,Enterprise
+2026-04-28,Asia Pacific,Wearables,Wireless Earbuds,447.11,174.43,1.28,Consumer
+2026-04-29,Europe,Audio,Wireless Earbuds,437.52,172.3,1.32,Enterprise
+2026-04-30,Europe,Wearables,Wireless Earbuds,451.03,177.23,1.33,Small Business
+2026-05-01,Latin America,Audio,UltraBook Pro,466.44,179.85,1.32,Consumer
+2026-05-02,Latin America,Wearables,Fitness Tracker X,471.38,188.52,1.33,Small Business
+2026-05-03,Latin America,Electronics,Fitness Tracker X,481.51,184.48,1.28,Enterprise
+2026-05-04,Europe,Electronics,Fitness Tracker X,471.88,178.18,1.3,Small Business
+2026-05-05,Latin America,Electronics,Fitness Tracker X,489.13,177.6,1.3,Enterprise
+2026-05-06,Asia Pacific,Electronics,Wireless Earbuds,512.71,182.15,1.24,Consumer
+2026-05-07,Europe,Electronics,NoiseCancel Headphones,492.94,182.42,1.28,Consumer
+2026-05-08,North America,Electronics,Fitness Tracker X,471.01,188.44,1.33,Consumer
+2026-05-09,Latin America,Electronics,NoiseCancel Headphones,474.5,191.7,1.36,Consumer
+2026-05-10,Europe,Wearables,Fitness Tracker X,476.57,187.83,1.4,Consumer
+2026-05-11,North America,Electronics,UltraBook Pro,474.03,188.21,1.47,Enterprise
+2026-05-12,North America,Wearables,Fitness Tracker X,474.27,179.98,1.47,Small Business
+2026-05-13,Latin America,Electronics,Curved Monitor 4K,481.78,186.56,1.44,Small Business
+2026-05-14,Latin America,Audio,Fitness Tracker X,500.02,186.8,1.45,Enterprise
+2026-05-15,Europe,Electronics,Curved Monitor 4K,495.42,189.55,1.42,Small Business
+2026-05-16,North America,Audio,Wireless Earbuds,521.32,188.16,1.47,Consumer
+2026-05-17,Europe,Electronics,Fitness Tracker X,535.82,194.65,1.5,Small Business
+2026-05-18,Europe,Audio,NoiseCancel Headphones,511.71,201.32,1.48,Enterprise
+2026-05-19,Asia Pacific,Wearables,NoiseCancel Headphones,528.64,200.43,1.44,Enterprise
+2026-05-20,North America,Electronics,Wireless Earbuds,506.44,209.53,1.51,Consumer
+2026-05-21,North America,Wearables,Curved Monitor 4K,505.69,209.85,1.57,Enterprise
+2026-05-22,Europe,Electronics,Curved Monitor 4K,508.56,210.61,1.53,Small Business
+2026-05-23,Europe,Audio,Wireless Earbuds,516.36,212.03,1.53,Consumer
+2026-05-24,Asia Pacific,Wearables,NoiseCancel Headphones,499.46,220.17,1.58,Enterprise
+2026-05-25,North America,Audio,Wireless Earbuds,526.39,218.48,1.54,Enterprise
+2026-05-26,Latin America,Audio,Wireless Earbuds,530.43,211.12,1.48,Small Business
+2026-05-27,North America,Audio,Curved Monitor 4K,539.41,220.11,1.44,Consumer
+2026-05-28,Asia Pacific,Electronics,UltraBook Pro,551.74,231.5,1.49,Small Business
+2026-05-29,Europe,Electronics,NoiseCancel Headphones,563.86,231.56,1.52,Consumer
+2026-05-30,Europe,Electronics,Wireless Earbuds,571.13,221.22,1.46,Consumer
+2026-05-31,North America,Electronics,UltraBook Pro,554.46,211.61,1.46,Small Business
+2026-06-01,North America,Audio,UltraBook Pro,536.05,212.77,1.5,Enterprise
+2026-06-02,Europe,Audio,Curved Monitor 4K,541.31,217.18,1.44,Small Business
+2026-06-03,Asia Pacific,Electronics,Curved Monitor 4K,520.82,214.37,1.47,Enterprise
+2026-06-04,Europe,Wearables,Wireless Earbuds,534.2,208.26,1.54,Small Business
+2026-06-05,North America,Wearables,NoiseCancel Headphones,516.18,216.82,1.6,Small Business
+2026-06-06,North America,Audio,Fitness Tracker X,522.53,218.51,1.64,Enterprise
+2026-06-07,Asia Pacific,Audio,Curved Monitor 4K,529.57,221.38,1.6,Enterprise
+2026-06-08,Latin America,Audio,Curved Monitor 4K,549.36,227.84,1.62,Consumer
+2026-06-09,Asia Pacific,Wearables,UltraBook Pro,560.59,219.39,1.56,Small Business
+2026-06-10,Asia Pacific,Electronics,Curved Monitor 4K,590.79,221,1.54,Consumer
+2026-06-11,Asia Pacific,Audio,Wireless Earbuds,587.66,211.09,1.56,Enterprise
+2026-06-12,Europe,Electronics,Wireless Earbuds,598,209.45,1.56,Enterprise
+2026-06-13,Latin America,Electronics,UltraBook Pro,592.02,214.09,1.59,Small Business
+2026-06-14,Latin America,Wearables,UltraBook Pro,614.83,219.74,1.59,Small Business
+2026-06-15,Europe,Wearables,UltraBook Pro,614.7,213.52,1.59,Consumer
+2026-06-16,Europe,Electronics,Curved Monitor 4K,611.03,224.66,1.66,Enterprise
+2026-06-17,North America,Wearables,Fitness Tracker X,633.3,226.78,1.61,Enterprise
+2026-06-18,Europe,Wearables,UltraBook Pro,642.81,220.78,1.67,Small Business
+2026-06-19,Latin America,Electronics,Curved Monitor 4K,669.02,222.73,1.74,Enterprise
+2026-06-20,Asia Pacific,Electronics,NoiseCancel Headphones,678.45,214.75,1.74,Consumer
+2026-06-21,Europe,Electronics,Fitness Tracker X,648.66,209.72,1.79,Enterprise
+2026-06-22,Asia Pacific,Electronics,Curved Monitor 4K,657.63,209.91,1.74,Small Business
+2026-06-23,Asia Pacific,Wearables,Fitness Tracker X,630.28,207.91,1.67,Consumer
+2026-06-24,Latin America,Electronics,NoiseCancel Headphones,654.48,199.7,1.63,Consumer
+2026-06-25,Europe,Electronics,Fitness Tracker X,686.17,203.03,1.66,Consumer
+2026-06-26,North America,Audio,Curved Monitor 4K,700.9,205.9,1.65,Small Business
+2026-06-27,Europe,Audio,NoiseCancel Headphones,718.74,210.26,1.71,Small Business
+2026-06-28,Latin America,Wearables,Wireless Earbuds,740.78,207.28,1.77,Small Business
+2026-06-29,Europe,Wearables,NoiseCancel Headphones,730.72,200.64,1.7,Consumer
+2026-06-30,Asia Pacific,Wearables,Fitness Tracker X,761.68,195.83,1.69,Consumer
+2026-07-01,Europe,Wearables,NoiseCancel Headphones,786.21,197.16,1.76,Consumer

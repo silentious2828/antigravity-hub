@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Branding Personal Project - Manus AI Workspace</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .architecture {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-icon {
+            font-size: 1.8em;
+        }
+
+        .agent-list {
+            list-style: none;
+        }
+
+        .agent-list li {
+            padding: 12px;
+            margin-bottom: 8px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+            font-size: 0.95em;
+            color: #333;
+            transition: background 0.2s ease;
+        }
+
+        .agent-list li:hover {
+            background: #e8eaf6;
+        }
+
+        .agent-list li strong {
+            color: #667eea;
+        }
+
+        .flow-diagram {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .flow-diagram h2 {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .flow-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .flow-step {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .flow-arrow {
+            font-size: 2em;
+            color: #667eea;
+            flex-shrink: 0;
+        }
+
+        .metrics-grid {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .metrics-grid h2 {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .metric-card h3 {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .metric-value {
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        .schedule-box {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .schedule-box h2 {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .schedule-times {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .time-slot {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .time-slot .time {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .time-slot .action {
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        .connectors-box {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .connectors-box h2 {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .connector-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .connector-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 4px solid #667eea;
+        }
+
+        .connector-item h3 {
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .connector-item p {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .connector-uid {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8em;
+            color: #999;
+            word-break: break-all;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .status-active {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .flow-steps {
+                flex-direction: column;
+            }
+
+            .flow-arrow {
+                transform: rotate(90deg);
+            }
+
+            .architecture {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Career Branding Personal Project</h1>
+            <p>Manus AI Workspace Setup & Visualization</p>
+        </header>
+
+        <!-- Architecture Overview -->
+        <div class="flow-diagram">
+            <h2>System Architecture</h2>
+            <div class="flow-steps">
+                <div class="flow-step">📧 Connectors</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">🤖 Agents</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">📊 Dashboards</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">⚡ Automation</div>
+            </div>
+        </div>
+
+        <!-- Main Architecture Sections -->
+        <div class="architecture">
+            <!-- Email Management Agents -->
+            <div class="section">
+                <h2><span class="section-icon">📬</span> Email Management</h2>
+                <ul class="agent-list">
+                    <li><strong>Morning Digest</strong> - Unread emails summary</li>
+                    <li><strong>Midday Recruiter Check</strong> - 24-hour recruiter update</li>
+                    <li><strong>End-of-Day Action Items</strong> - Task extraction</li>
+                    <li><strong>Monday Planning</strong> - Weekly kick-off</li>
+                    <li><strong>Midweek Pipeline Review</strong> - Pipeline tracking</li>
+                    <li><strong>Friday Wrap-Up</strong> - Weekly summary</li>
+                    <li><strong>Weekend Catch-Up</strong> - Weekend unread summary</li>
+                </ul>
+            </div>
+
+            <!-- Recruiter Reply Agents -->
+            <div class="section">
+                <h2><span class="section-icon">✉️</span> Recruiter Replies</h2>
+                <ul class="agent-list">
+                    <li><strong>Recruiter Thank You</strong> - Initial acknowledgment</li>
+                    <li><strong>Confirm Interest</strong> - Role pursuit</li>
+                    <li><strong>Polite Decline</strong> - Turning down roles</li>
+                    <li><strong>Request Call</strong> - Scheduling intro</li>
+                </ul>
+            </div>
+
+            <!-- LinkedIn Engagement Agents -->
+            <div class="section">
+                <h2><span class="section-icon">🔗</span> LinkedIn Engagement</h2>
+                <ul class="agent-list">
+                    <li><strong>Recruiter Appreciation</strong> - Thank-you post</li>
+                    <li><strong>Thought Leadership</strong> - ERP + GenAI insights</li>
+                    <li><strong>Networking Update</strong> - Collaboration outcomes</li>
+                    <li><strong>Weekly Wrap</strong> - End-of-week reflection</li>
+                    <li><strong>Career Reflection</strong> - 30-day recap</li>
+                </ul>
+            </div>
+
+            <!-- Analytics Agents -->
+            <div class="section">
+                <h2><span class="section-icon">📊</span> Analytics & Scoring</h2>
+                <ul class="agent-list">
+                    <li><strong>Analytics Board</strong> - KPI tracking</li>
+                    <li><strong>Momentum Scoring</strong> - Score calculation</li>
+                    <li><strong>Heatmap Diagnostic</strong> - Weekly status</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Scheduled Automation -->
+        <div class="schedule-box">
+            <h2>⏰ Master Career Branding Routine</h2>
+            <p style="margin-bottom: 20px; color: #666;">Automated execution 3 times daily across all agents</p>
+            <div class="schedule-times">
+                <div class="time-slot">
+                    <div class="time">08:00 AM</div>
+                    <div class="action">Morning Digest</div>
+                    <div class="action">Email Summary</div>
+                </div>
+                <div class="time-slot">
+                    <div class="time">12:00 PM</div>
+                    <div class="action">Midday Recruiter Check</div>
+                    <div class="action">Pipeline Update</div>
+                </div>
+                <div class="time-slot">
+                    <div class="time">06:00 PM</div>
+                    <div class="action">End-of-Day Action Items</div>
+                    <div class="action">Tomorrow's Checklist</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Connectors -->
+        <div class="connectors-box">
+            <h2>🔌 Connectors</h2>
+            <div class="connector-list">
+                <div class="connector-item">
+                    <h3>📧 Outlook Mail</h3>
+                    <p>Email ingestion and management</p>
+                    <div class="connector-uid">UID: d485c6dd-4939-40fb-9c4a-c9821971468b</div>
+                    <span class="status-badge status-active">✓ Active</span>
+                </div>
+                <div class="connector-item">
+                    <h3>📸 Instagram</h3>
+                    <p>Social media content publishing</p>
+                    <div class="connector-uid">UID: 4b899211-fd12-410e-a8d2-264a409cbc78</div>
+                    <span class="status-badge status-active">✓ Active</span>
+                </div>
+                <div class="connector-item">
+                    <h3>💼 Taplio (LinkedIn)</h3>
+                    <p>LinkedIn content management</p>
+                    <div class="connector-uid">UID: b0b849c6-2cab-4a24-b300-4df5de49a4de</div>
+                    <span class="status-badge status-pending">⏳ Optional</span>
+                </div>
+                <div class="connector-item">
+                    <h3>📅 Outlook Calendar</h3>
+                    <p>Meeting and event scheduling</p>
+                    <div class="connector-uid">UID: 4bca3029-d276-4644-898d-578a723361b2</div>
+                    <span class="status-badge status-active">✓ Active</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Metrics Dashboard -->
+        <div class="metrics-grid">
+            <h2>📈 Career Momentum Metrics</h2>
+            <div class="metrics">
+                <div class="metric-card">
+                    <h3>Email Metrics</h3>
+                    <div class="metric-value">3</div>
+                    <p>Daily Routines</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Recruiter Replies</h3>
+                    <div class="metric-value">4</div>
+                    <p>Template Types</p>
+                </div>
+                <div class="metric-card">
+                    <h3>LinkedIn Posts</h3>
+                    <div class="metric-value">5</div>
+                    <p>Content Types</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Analytics Agents</h3>
+                    <div class="metric-value">3</div>
+                    <p>Tracking Systems</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Total Agents</h3>
+                    <div class="metric-value">19</div>
+                    <p>Specialized Agents</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Automation</h3>
+                    <div class="metric-value">∞</div>
+                    <p>Recurring Daily</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Career Branding Personal Project | Powered by Manus AI | 30-Day Career Momentum System</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+{
+  "system_name": "RAIN-CAG 34 Master System Architecture",
+  "document_control_id": "ARCH-SPEC-RAIN34-20260806",
+  "archive_lock_id": "ARCHIVE-20260826-001",
+  "registry_file": "omniroute-master-registry-gemini-merged.json",
+  "candidate": {
+    "full_name": "Sam Leong (Josen Leong Chong Kwee)",
+    "location": "Singapore (APAC Regional Hub)",
+    "email": "silentious@outlook.com",
+    "phone": "+65 8917 2828",
+    "linkedin": "https://linkedin.com/in/samleong2828/",
+    "target_compensation_floor": "S$120K – S$144K+ per annum",
+    "target_role_vectors": [
+      "Head of Global Distribution / Export (Automotive / Stamford Tyres)",
+      "Senior Transformation & Enterprise AI Practice Lead",
+      "Regional Supply Chain & ERP Modernization Specialist (SAP MM)"
+    ]
+  },
+  "tiers": {
+    "tier1_core_assets": {
+      "name": "Core Assets",
+      "agent_count": 5,
+      "status": "LOCKED",
+      "agents": [
+        { "id": "T1-01", "name": "CV Agent", "version": "v2.4-ST", "file": "cv-agent-spec.md" },
+        { "id": "T1-02", "name": "Cover Letter Agent", "version": "v1.0", "file": "cover-letter-agent-spec.md" },
+        { "id": "T1-03", "name": "Podcast Agent", "version": "v1.0", "file": "podcast-agent-spec.md" },
+        { "id": "T1-04", "name": "Executive Dossier Agent", "version": "v1.0", "file": "executive-dossier-agent-spec.md" },
+        { "id": "T1-05", "name": "Final Goals Agent", "version": "v1.0", "file": "final-goals-agent-spec.md" }
+      ]
+    },
+    "tier2_metrics_analytics": {
+      "name": "Metrics & Analytics",
+      "agent_count": 5,
+      "status": "ACTIVE",
+      "agents": [
+        { "id": "T2-01", "name": "Success Metrics Agent", "version": "v2.4", "file": "success-metrics-agent-spec.md" },
+        { "id": "T2-02", "name": "90-Day Plan Agent", "version": "v2.4", "file": "90day-plan-agent-spec.md" },
+        { "id": "T2-03", "name": "Risk Mitigation Agent", "version": "v2.3", "file": "risk-mitigation-agent-spec.md" },
+        { "id": "T2-04", "name": "Review Cadence Agent", "version": "v2.2", "file": "review-cadence-agent-spec.md" },
+        { "id": "T2-05", "name": "Analytics Dashboard Agent", "version": "v2.1", "file": "analytics-dashboard-agent-spec.md" }
+      ]
+    },
+    "tier3_outreach_visibility": {
+      "name": "Outreach & Visibility",
+      "agent_count": 6,
+      "status": "ACTIVE",
+      "agents": [
+        { "id": "T3-01", "name": "LinkedIn Profile Agent", "version": "v2.0", "file": "linkedin-profile-agent-spec.md" },
+        { "id": "T3-02", "name": "LinkedIn Posts Agent", "version": "v2.0", "file": "linkedin-posts-agent-spec.md" },
+        { "id": "T3-03", "name": "LinkedIn Articles Agent", "version": "v2.0", "file": "linkedin-articles-agent-spec.md" },
+        { "id": "T3-04", "name": "Website Agent", "version": "v1.5", "file": "website-agent-spec.md" },
+        { "id": "T3-05", "name": "Email Outreach Agent", "version": "v2.0", "file": "email-outreach-agent-spec.md" },
+        { "id": "T3-06", "name": "Podcast Platform Agent", "version": "v1.0", "file": "podcast-platform-agent-spec.md" }
+      ]
+    },
+    "tier4_governance_control": {
+      "name": "Governance & Control",
+      "agent_count": 5,
+      "status": "ENFORCED",
+      "agents": [
+        { "id": "T4-01", "name": "Rewrite Governance Agent", "version": "v5.0", "file": "rewrite-governance-agent-spec.md" },
+        { "id": "T4-02", "name": "Versioning Agent", "version": "v5.0", "file": "versioning-agent-spec.md" },
+        { "id": "T4-03", "name": "Change Log Agent", "version": "v5.0", "file": "change-log-agent-spec.md" },
+        { "id": "T4-04", "name": "Stakeholder Notification Agent", "version": "v5.0", "file": "stakeholder-notification-agent-spec.md" },
+        { "id": "T4-05", "name": "Governance Roles Agent", "version": "v5.0", "file": "governance-roles-agent-spec.md" }
+      ]
+    },
+    "tier5_supporting": {
+      "name": "Supporting Agents",
+      "agent_count": 13,
+      "status": "ALIGNED",
+      "agents": [
+        { "id": "T5-01", "name": "Positioning Lock Agent", "version": "v2.0", "file": "positioning-lock-agent-spec.md" },
+        { "id": "T5-02", "name": "Content Authority Agent", "version": "v2.0", "file": "content-authority-agent-spec.md" },
+        { "id": "T5-03", "name": "Network Architecture Agent", "version": "v1.5", "file": "network-architecture-agent-spec.md" },
+        { "id": "T5-04", "name": "Opportunity Filter Agent", "version": "v1.5", "file": "opportunity-filter-agent-spec.md" },
+        { "id": "T5-05", "name": "Narrative Mastery Agent", "version": "v2.0", "file": "narrative-mastery-agent-spec.md" },
+        { "id": "T5-06", "name": "Referral System Agent", "version": "v1.0", "file": "referral-system-agent-spec.md" },
+        { "id": "T5-07", "name": "Testimonial Agent", "version": "v1.0", "file": "testimonial-agent-spec.md" },
+        { "id": "T5-08", "name": "Negotiation Agent", "version": "v1.5", "file": "negotiation-agent-spec.md" },
+        { "id": "T5-09", "name": "Opportunity Flow Agent", "version": "v1.0", "file": "opportunity-flow-agent-spec.md" },
+        { "id": "T5-10", "name": "Compensation Leverage Agent", "version": "v1.0", "file": "compensation-leverage-agent-spec.md" },
+        { "id": "T5-11", "name": "Executive Search Interface Agent", "version": "v1.0", "file": "executive-search-interface-agent-spec.md" },
+        { "id": "T5-12", "name": "Boardroom Deck Agent", "version": "v1.0", "file": "boardroom-deck-agent-spec.md" },
+        { "id": "T5-13", "name": "Succession & Legacy Agent", "version": "v1.0", "file": "succession-legacy-agent-spec.md" }
+      ]
+    }
+  },
+  "total_agents": 34,
+  "system_health": "🟢 100% OPERATIONAL & SOVEREIGNLY LOCKED",
+  "execution_mode": "Real-time staging, live deployment",
+  "dual_track_deployment": {
+    "track_a": "Copilot ATS CV (v2.4-ST)",
+    "track_b": "Gemini Executive Dossier"
+  },
+  "checkpoints": {
+    "CP-001": { "status": "COMPLETED", "desc": "Dual-Track CV Suite finalized" },
+    "CP-002": { "status": "COMPLETED", "desc": "Master Narrative Cover Letter + 3 Variants staged" },
+    "CP-003": { "status": "COMPLETED", "desc": "Podcast EP-12 produced, transcript synced" },
+    "CP-004": { "status": "COMPLETED", "desc": "Stamford Tyres Head of Export Application Submitted" },
+    "CP-005": { "status": "COMPLETED", "desc": "LinkedIn 1,000+ Connections Breached" },
+    "CP-006": { "status": "COMPLETED", "desc": "34-Agent System Deployment & Codex Codified" },
+    "CP-007": { "status": "IN_PROGRESS", "desc": "SIT Digital Supply Chain Programme (SCTP)" },
+    "CP-008": { "status": "PENDING", "desc": "AI Apprenticeship Programme (AIAP) Application" },
+    "CP-009": { "status": "IN_PROGRESS", "desc": "Bi-Weekly LinkedIn & Substack Content Cadence" },
+    "CP-010": { "status": "IN_PROGRESS", "desc": "Recruiter Conversion Protocol Execution" },
+    "CP-011": { "status": "PENDING", "desc": "Q1 Mandatory Quarterly Review & Brand Telemetry Audit" }
+  }
+}

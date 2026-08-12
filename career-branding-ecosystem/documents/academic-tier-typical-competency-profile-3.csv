@@ -1,0 +1,4 @@
+﻿Academic Tier,Typical competency profile,How 31 years maps,34‑agent mapping
+B.Sc.,"Core algorithms, programming, applied statistics, project implementation",Years 1–8: foundational engineering and applied projects — typically covered,"Basic agent implementations, unit tests, and integration scripts"
+M.Sc.,"Advanced applied ML, systems design, MLOps, reproducible experiments, domain specialization","Years 9–20+: systems architecture, multi‑agent orchestration, CI/CD, governance — strong match","34‑agent architecture, CI/CD blueprint, monitoring, model cards, consent/PII controls"
+Ph.D. readiness,"Original research, theoretical depth, reproducible experiments, peer‑reviewed outputs",Years 20+: leadership and systems depth present; needs documented original contributions and formal analyses,"Requires reproducible experiments, ablation studies, novel orchestration/metric contributions"

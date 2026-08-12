@@ -1,0 +1,58 @@
+SAM LEONG
+Singapore | samleong2828@linkedin.com
+
+EXECUTIVE SUMMARY
+A rare hybrid of 31 years of executive operational leadership and hands-on AI architecture and enterprise systems modernization. Proven track record directing multi-million-dollar global supply chain operations, trading portfolios, and complex international expansions across 8+ countries. Combines deep domain expertise in Enterprise ERP (SAP MM, Oracle) and Six Sigma Black Belt operational excellence with modern software engineering competencies, including Python, SQL, automated testing (Selenium, JMeter), Model Context Protocol (MCP), and Certified Scrum Master (PSM I & II). Specializes in AI Product Management, Generative AI integration, and enterprise-wide digital transformation to future-proof operations and drive measurable efficiency.
+
+CORE COMPETENCIES & TECHNICAL SKILLS
+- Executive Leadership: Global Supply Chain Modernisation, P&L Ownership, Cross-Border Expansion, PMO Leadership.
+- Enterprise Systems & ERP: SAP MM / BTP, Oracle, System Integrations, QA & Performance Testing.
+- AI & Emerging Tech: GenAI Architecture, AI Product Management (CoE), Python, SQL, Model Context Protocol (MCP), Anthropic Claude API.
+- Process Excellence: Certified Six Sigma Black Belt, Scrum Master (PSM I & II), Agile Frameworks, Risk Mitigation.
+
+PROFESSIONAL EXPERIENCE
+
+NCS Group | Singapore (Sep 2021 – Jul 2026)
+AI Analyst, Product Management & Fleet Management Systems SME / QA Lead
+- Spearheaded ERP Modernisation & GenAI Integration, integrating automated testing tools and driving a 30% increase in QA/testing efficiency.
+- Architected data pipelines and predictive maintenance frameworks that lowered equipment and system downtime by 15%.
+- Embedded KPI governance, ensuring 95%+ operational compliance across complex enterprise environments.
+
+Digital Bridgestone | Regional / Singapore (Jun 2022 – Sep 2024)
+Fleet Management Systems SME & QA Lead (Hybrid)
+- Directed migration from Xamarin Toolbox Touch to .NET MAUI, delivering mission-critical fleet applications on iOS and Android.
+- Defined product vision and roadmap for fleet optimisation solutions, implementing models that improved asset utilisation and reduced downtime.
+- Designed QA testing frameworks ensuring cross-platform compliance and performance.
+
+Yu Luo Trading Co. Ltd. | China (Nov 2018 – Aug 2021)
+Senior Director Sales Operations
+- Directed international iron ore export operations, building resilient procurement and logistics networks across challenging markets.
+- Negotiated high-value contracts and pricing, enhancing efficiency through cost control and vessel sourcing.
+
+Helios Marine | Singapore (Nov 2016 – Oct 2018)
+Director New Business Development
+- Expanded trading portfolios, driving double-digit annual growth and penetrating emerging markets.
+- Negotiated long-term contracts with suppliers and buyers, executing structured procurement to deliver consistent ROI.
+
+Global Link Automobile | Singapore (Nov 2006 – Oct 2016)
+Head of Global Sales
+- Exported used automobiles into 8+ international markets, scaling a 12% CAGR growth trajectory across 5 new regions.
+- Improved pipeline conversion by 18% via CRM and analytics implementation while navigating complex cross-border customs.
+
+Wei Ngiap Motor Pte Ltd (2000–2006) & Hua Yang Investment Group (1995–2000) | Singapore
+Senior Global Sales Manager / Senior Manager Sales Operations
+- Managed multi-million-dollar export portfolios, optimized inventory workflows, and built high-performing teams across Asia.
+
+EDUCATION & ACADEMIC EQUIVALENCE
+Lithan Academy Singapore (Apr 2020 – Dec 2020)
+Professional Diploma in InfoComm Technology (Professional Services & SAP Material Management)
+- Core Focus: Enterprise ERP (SAP MM), Solution Architecture, Business Process Re-engineering, System Integration, Change Management.
+
+KEY LICENSES & CERTIFICATIONS
+- AI Architecture & Agentic Systems: Building with the Claude API, Model Context Protocol (MCP - Advanced & Intro), Agent Skills (Anthropic, 2026).
+- Agile Governance: Professional Scrum Master™ II (PSM II) & PSM I (Scrum.org / Skillsoft).
+- Process Excellence: Certified Six Sigma Black Belt, Green Belt, Yellow Belt.
+- Technical & QA: SQL Basics, Performance Testing & JMeter, Selenium Deep Dive, Parameterized JUnit Tests, Python / Pandas / NumPy.
+
+LANGUAGES
+English (Full Professional), Mandarin Chinese (Native), Cantonese (Native), Hokkien (Native), Hainanese (Native).

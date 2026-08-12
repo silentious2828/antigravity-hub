@@ -1,0 +1,53 @@
+[
+  {
+    "id": "TC-01",
+    "source": "Gmail",
+    "priority": "High",
+    "subject": "URGENT: Port Congestion - Singapore Terminal",
+    "body": "Severe bottleneck detected at Terminal T3. We have 50 containers (ID: SG-LOG-7829) pending clearance. Requesting immediate reroute strategy for cold-chain goods.",
+    "expected_routing": "logistics-priority (DeepSeek-V4-Pro)",
+    "expected_model": "deepseek-v4-pro",
+    "expected_fallback": "mistral-small-3.2"
+  },
+  {
+    "id": "TC-02",
+    "source": "Gmail",
+    "priority": "High",
+    "subject": "Rate Limit Simulation - 429 Error",
+    "body": "Simulating rate limit hit on primary provider. This should trigger auto-fallback to secondary node in logistics-priority chain.",
+    "expected_routing": "logistics-priority (DeepSeek-V4-Pro → Mistral Small 3.2)",
+    "expected_model": "mistral-small-3.2",
+    "expected_fallback": "llama3.2-local"
+  },
+  {
+    "id": "TC-03",
+    "source": "Outlook",
+    "priority": "Low",
+    "subject": "Weekly Newsletter: AI in Logistics Monthly",
+    "body": "Check out the top 10 trends in supply chain automation for August. Forwarding this to the archives.",
+    "expected_routing": "outlook-cleanup-budget (Mistral/Gemma Free)",
+    "expected_model": "mistral-free",
+    "expected_fallback": "gemma-free"
+  },
+  {
+    "id": "TC-04",
+    "source": "Outlook",
+    "priority": "Low",
+    "subject": "Quota Exhausted Simulation",
+    "body": "Simulating free-tier quota exhaustion. Should drain Mistral Free first, then Gemma Free, then fall back to local Llama 3.2.",
+    "expected_routing": "outlook-cleanup-budget (Fill-First)",
+    "expected_model": "gemma-free",
+    "expected_fallback": "llama3.2-local"
+  },
+  {
+    "id": "TC-05",
+    "source": "Both",
+    "priority": "Critical",
+    "subject": "HITL Boundary Test - Draft Only",
+    "body": "Verify that agents only create drafts and never send emails automatically. This tests the human-in-the-loop safety boundary.",
+    "expected_routing": "logistics-priority (DeepSeek-V4-Pro)",
+    "expected_model": "deepseek-v4-pro",
+    "expected_fallback": "mistral-small-3.2",
+    "hitl_test": true
+  }
+]
