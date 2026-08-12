@@ -121,7 +121,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -e ".[gcp]"
-          pip install pytest pytest-cov coverage
+          pip install pytest pytest-cov coverage numpy
 
       - name: 🧪 Run CLI test subset with coverage
         run: |
