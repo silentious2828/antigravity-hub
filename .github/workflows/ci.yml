@@ -61,12 +61,7 @@ jobs:
       - name: 📝 Notebook syntax check
         run: |
           test -f ai-enterprise/AI_Enterprise_Operational_Dashboard.ipynb
-          python3 -m py_compile <<'PYEOF'
-import json
-nb = json.load(open('ai-enterprise/AI_Enterprise_Operational_Dashboard.ipynb'))
-code_cells = [c for c in nb['cells'] if c['cell_type'] == 'code']
-print(f"Validated {len(code_cells)} code cells")
-PYEOF
+          python3 -c "import json; nb=json.load(open('ai-enterprise/AI_Enterprise_Operational_Dashboard.ipynb')); print(f'Validated {len([c for c in nb[\"cells\"] if c[\"cell_type\"]==\"code\"])} code cells')"
 
       - name: 📊 Upload enterprise coverage to Codecov
         uses: codecov/codecov-action@v4
