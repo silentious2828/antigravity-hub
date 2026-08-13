@@ -44,3 +44,17 @@ Global Transformation Leader and Principal Enterprise Architect with 31 years of
 * 11 years of foundational operational management, technical systems execution, and commercial sales leadership across industrial and ICT sectors.
 
 ## EDUCATION & PROFESSIONAL CREDENTIALS
+* Digital Supply Chain Executive Programme — Singapore Institute of Technology (SIT), 2026
+* Advanced Diploma in Business Analysis — NCS Group, 2023
+* Professional Diploma in Infocomm Technology (SAP MM) — NICF, 2020
+* Certified SAP MM Professional — Credential ID: dvi26arefp9n
+* Professional Scrum Master I & II (PSM I, PSM II) — Scrum.org
+
+---
+
+## TECHNICAL & GOVERNANCE FOOTPRINT
+* AI/Agent Ecosystem: 45-agent CrewAI/Anthropic Claude architecture with async WebSocket telemetry
+* Forensic Ledger: SHA-256 hash-chained SQLite audit trail with constructor-level integrity validation
+* CI/CD: Multi-zone GitHub Actions matrix with parallel test runners and Codecov coverage
+* Cloud: FastAPI WebSocket gateways, MSAL/Microsoft Graph API, multi-cloud failover meshes
+* ERP: SAP MM certified, Oracle ERP, predictive maintenance, inventory optimization
