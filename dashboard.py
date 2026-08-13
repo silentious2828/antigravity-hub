@@ -142,12 +142,35 @@ def render_event_table(events: List[Dict[str, Any]]) -> None:
     st.dataframe(table_rows, use_container_width=True, height=320)
 
 
+def render_lifecycle_telemetry() -> None:
+    """
+    Parses structured JSON entries from logs/outlook_agent.log to display operational data.
+    """
+    st.sidebar.markdown("### ⚙️ Lifecycle Operations")
+    log_path = Path("logs/outlook_agent.log")
+    if log_path.exists():
+        with open(log_path, "r") as f:
+            log_lines = f.readlines()
+
+        recent_ops = [json.loads(line) for line in log_lines[-5:] if line.strip()]
+        for op in recent_ops:
+            st.sidebar.caption(
+                f"🆔 {op.get('task_id', 'N/A')} | {op.get('action_type', 'N/A')} -> "
+                f"{op.get('target_module', 'N/A')} ({op.get('status', 'N/A')})"
+            )
+    else:
+        st.sidebar.info("No active infrastructure logs recorded.")
+
+
 # ---------------------------------------------------------------------------
 # Page layout
 # ---------------------------------------------------------------------------
 
 st.set_page_config(page_title="OmniRoute Hub", layout="wide")
 st.title("🛡️ OmniRoute Hub Dashboard")
+
+with st.sidebar:
+    render_lifecycle_telemetry()
 
 events = fetch_events(limit=500)
 is_valid, error_message, checked_count = compute_chain_health(events)
