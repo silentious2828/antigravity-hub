@@ -11,6 +11,7 @@ sys.path.insert(0, os.path.join(ROOT, "ai-enterprise"))
 
 from logistics_triage_agent import LogisticsTriageAgent
 from stripe_sync_agent import StripeSyncAgent
+from outlook_strategist_agent import OutlookStrategistAgent
 
 FASTAPI_WS_URL = "ws://127.0.0.1:20128/ws"
 
@@ -18,6 +19,7 @@ FASTAPI_WS_URL = "ws://127.0.0.1:20128/ws"
 async def stream_agent_ingestion():
     logistics_agent = LogisticsTriageAgent()
     stripe_agent = StripeSyncAgent()
+    outlook_agent = OutlookStrategistAgent()
 
     print(f"\n📡 Connecting to OmniRoute WebSocket Gateway at {FASTAPI_WS_URL}...")
 
@@ -42,9 +44,13 @@ async def stream_agent_ingestion():
                     event_type = payload.get("type")
                     provider = payload.get("provider")
 
-                    if event_source in ["gmail", "outlook"]:
+                    if event_source == "gmail":
                         print(f"\n📥 [ORCHESTRATOR] Routing inbox event {payload.get('request_id')} to Logistics Agent")
                         logistics_agent.ingest_and_triage(payload)
+
+                    elif event_source == "outlook":
+                        print(f"\n📥 [ORCHESTRATOR] Routing cleanup event {payload.get('request_id')} to Outlook Strategist")
+                        outlook_agent.process_cleanup_event(payload)
 
                     elif provider == "stripe-webhook" or (event_type and event_type.startswith("customer.")):
                         print(f"\n📥 [ORCHESTRATOR] Routing webhook event {payload.get('id')} to Stripe Agent")
