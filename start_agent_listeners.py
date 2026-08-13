@@ -63,8 +63,9 @@ async def stream_agent_ingestion():
                         print(f"❓ [ORCHESTRATOR] Unmapped broadcast payload received: {payload}")
 
         except websockets.ConnectionClosed:
-            print("⚠️ WebSocket connection dropped. Attempting automatic reconnection...")
-            await asyncio.sleep(2)
+            # Silenced connection noise: prints a concise status flag instead of flooding standard error logs
+            print("📡 [SENTINEL] Gateway offline or recycling. Quietly polling for auto-reconnection...")
+            await asyncio.sleep(5) # Incremented to 5s to reduce polling thrashing on your NVMe
             continue
         except Exception as e:
             print(f"❌ Critical exception in listener pool loop: {e}")
