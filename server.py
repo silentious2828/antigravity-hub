@@ -74,6 +74,7 @@ async def websocket_endpoint(websocket: WebSocket):
                 latest_events.pop(0)
 
             await websocket.send_json({"status": "received", "event": event})
+            await manager.broadcast({"status": "broadcast", "event": event})
     except WebSocketDisconnect:
         pass
     except Exception:

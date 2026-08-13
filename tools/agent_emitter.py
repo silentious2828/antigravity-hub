@@ -46,6 +46,7 @@ def emit_audit_event(
     """
     payload = {
         "timestamp": datetime.utcnow().isoformat(),
+        "source": "agent",
         "provider": provider,
         "event": event_type,
         "subject": subject,
