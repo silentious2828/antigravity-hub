@@ -10,6 +10,13 @@
       "type": "local",
       "command": ["uvx", "mcp-jupyter"],
       "enabled": true
+    },
+    "stripe": {
+      "type": "local",
+      "command": ["npx", "-y", "@stripe/mcp-server"],
+      "env": {
+        "STRIPE_API_KEY": "env:STRIPE_SECRET_KEY"
+      }
     }
   }
 }
