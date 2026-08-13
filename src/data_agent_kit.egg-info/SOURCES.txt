@@ -14,7 +14,9 @@ src/data_agent_kit.egg-info/dependency_links.txt
 src/data_agent_kit.egg-info/entry_points.txt
 src/data_agent_kit.egg-info/requires.txt
 src/data_agent_kit.egg-info/top_level.txt
+tests/test_audit.py
 tests/test_bigquery.py
+tests/test_corruption_resilience.py
 tests/test_greeter.py
 tests/test_integration.py
 tests/test_logging.py
