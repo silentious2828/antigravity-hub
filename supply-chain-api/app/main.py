@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from .routes.optimization import router as optimization_router
+from .routes.analytics import router as analytics_router
 from .routes.frontend import router as frontend_router
 
 app = FastAPI(
@@ -19,6 +20,7 @@ app.add_middleware(
 )
 
 app.include_router(optimization_router)
+app.include_router(analytics_router)
 app.include_router(frontend_router)
 
 

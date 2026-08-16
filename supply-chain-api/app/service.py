@@ -6,9 +6,29 @@ state) so concurrent calls are safe.
 """
 from __future__ import annotations
 
+import hashlib
+import json
+import time
+from typing import Any
+
 import numpy as np
 
 from .models import Warehouse, Order, Connection, RouteInfo
+from .cache import (
+    get_inventory_cache,
+    get_route_cache,
+    get_forecast_cache,
+    cached_inventory,
+    cached_route,
+    cached_forecast,
+    clear_all_caches,
+)
+
+
+def _make_cache_key(*args: Any) -> str:
+    """Create a deterministic cache key from arguments."""
+    data = json.dumps([str(a) for a in args], sort_keys=True, default=str)
+    return hashlib.sha256(data.encode()).hexdigest()
 
 
 class DemandForecaster:
@@ -18,19 +38,30 @@ class DemandForecaster:
         self.alpha = alpha
 
     def forecast(self, historical_data: list[float], periods: int = 7) -> list[float]:
+        # Generate cache key for forecast
+        key = _make_cache_key(id(self), historical_data, periods)
+        cache = get_forecast_cache()
+
+        cached_result = cache.get(key)
+        if cached_result is not None:
+            return cached_result
+
         if not historical_data:
-            return [0.0] * periods
+            result = [0.0] * periods
+        else:
+            forecast = []
+            level = historical_data[0]
+            arr = np.asarray(historical_data, dtype=float)
 
-        forecast = []
-        level = historical_data[0]
-        arr = np.asarray(historical_data, dtype=float)
+            for _ in range(periods):
+                forecast.append(level)
+                avg_demand = float(np.mean(arr[-7:]))
+                level = self.alpha * avg_demand + (1 - self.alpha) * level
 
-        for _ in range(periods):
-            forecast.append(level)
-            avg_demand = float(np.mean(arr[-7:]))
-            level = self.alpha * avg_demand + (1 - self.alpha) * level
+            result = forecast
 
-        return forecast
+        cache.set(key, result)
+        return result
 
 
 class InventoryOptimizer:
