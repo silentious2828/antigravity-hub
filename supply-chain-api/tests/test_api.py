@@ -54,3 +54,39 @@ def test_eoq():
     r = client.get("/api/eoq", params={"annual_demand": 3650})
     assert r.status_code == 200
     assert r.json()["eoq"] > 0
+
+
+def test_inventory_summary():
+    r = client.get("/api/inventory-summary")
+    assert r.status_code == 200
+    body = r.json()
+    assert "total_warehouses" in body
+    assert "total_items_in_stock" in body
+
+
+def test_kpi_dashboard():
+    r = client.get("/api/kpi-dashboard", params={"period": "30d"})
+    assert r.status_code == 200
+    body = r.json()
+    assert "key_metrics" in body
+    assert "total_orders" in body["key_metrics"]
+
+
+def test_forecast_trends():
+    r = client.get("/api/forecast-trends", params={"periods": 7})
+    assert r.status_code == 200
+    body = r.json()
+    assert len(body["forecast"]) == 7
+
+
+def test_route_efficiency():
+    r = client.get("/api/route-efficiency")
+    assert r.status_code == 200
+    body = r.json()
+    assert "total_routes_optimized" in body
+
+
+def test_analytics_health():
+    r = client.get("/api/health-check")
+    assert r.status_code == 200
+    assert r.json()["status"] == "healthy"
